@@ -4,6 +4,19 @@ An independent mini-project exploring **four classical computer-vision technique
 
 ![Original procedural examples: before / after](results/overview.png)
 
+## Read the Technical Article
+
+Want to understand the theory behind the algorithms?
+
+I wrote a detailed article covering Gaussian and median
+filtering, object counting, Fourier-based noise removal,
+and K-means clustering.
+
+📖 **[From Lab to Code #1: Exploring Classical Computer Vision with Python and OpenCV](https://dev.to/ertugrulmutlu/from-lab-to-code-1-exploring-classical-computer-vision-with-python-and-opencv-3mcf)**
+
+This project is part of my
+**[From Lab to Code DEV.to series](https://dev.to/ertugrulmutlu/series/45513)**.
+
 ## What it demonstrates
 
 | Experiment | Technique | What to look for |
