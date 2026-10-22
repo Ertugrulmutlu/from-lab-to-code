@@ -18,7 +18,9 @@ An independent mini-project exploring **four classical computer-vision technique
 Use Python 3.10 or newer, preferably 3.11–3.13.
 
 ```powershell
-cd "D:\DEV\Projects\00_ACTIVE\from-lab-to-code\01-image-processing"
+git clone https://github.com/Ertugrulmutlu/from-lab-to-code.git
+cd from-lab-to-code/01-image-processing
+
 py -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe -m streamlit run app.py
