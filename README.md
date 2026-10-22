@@ -10,6 +10,19 @@ A growing collection of self-contained Python projects that turn engineering ide
 | --- | --- | --- |
 | 01 | [Image Processing — From Theory to Pixels](01-image-processing/) | Denoising, thresholding, connected components, Fourier filtering, K-means |
 
+## Articles & Technical Writing
+
+Each project is accompanied by a technical article explaining
+the underlying theory, implementation, and practical results.
+
+📚 **[Follow the From Lab to Code series on DEV.to](https://dev.to/ertugrulmutlu/series/45513)**
+
+### Published Articles
+
+| # | Article | Project |
+|---|---|---|
+| 01 | [Exploring Classical Computer Vision with Python and OpenCV](https://dev.to/ertugrulmutlu/from-lab-to-code-1-exploring-classical-computer-vision-with-python-and-opencv-3mcf) | [Image Processing](01-image-processing/) |
+
 ## Approach
 
 - **Build, visualize, explain.** Each project includes runnable code and sample results.
