@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061021">
+  <meta name="description" content="From Lab to Code — independent engineering mini-projects, practical implementations, and technical articles.">
+  <meta property="og:title" content="From Lab to Code | Engineering Projects">
+  <meta property="og:description" content="Small engineering projects. Real implementations. Clear results.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://raw.githubusercontent.com/Ertugrulmutlu/from-lab-to-code/main/01-image-processing/results/overview.png">
+  <title>From Lab to Code — Engineering Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <script src="app.js?v=4" defer></script>
+</head>
+<body>
+  <div class="site-shell" id="top">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="From Lab to Code home">
+        <span class="brand-icon" aria-hidden="true">&lt;/&gt;</span>
+        <span>From Lab to Code</span>
+      </a>
+      <nav class="main-nav" aria-label="Site navigation">
+        <a href="#projects">Projects</a>
+        <a href="https://dev.to/ertugrulmutlu/series/45513" target="_blank" rel="noopener noreferrer">Articles</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="header-socials">
+        <a class="social-icon" href="https://github.com/Ertugrulmutlu/from-lab-to-code" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.63 22.41c.58.1.79-.25.79-.55v-2.2c-3.22.7-3.91-1.37-3.91-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.06-.72.08-.71.08-.71 1.18.08 1.8 1.21 1.8 1.21 1.04 1.79 2.74 1.28 3.41.97.11-.75.41-1.28.73-1.56-2.56-.29-5.25-1.28-5.25-5.73 0-1.26.45-2.31 1.2-3.12-.12-.29-.51-1.48.12-3.08 0 0 .98-.32 3.2 1.2a11 11 0 0 1 5.82 0c2.22-1.52 3.2-1.2 3.2-1.2.63 1.6.24 2.79.12 3.08.75.81 1.2 1.86 1.2 3.12 0 4.46-2.7 5.43-5.27 5.72.42.37.79 1.09.79 2.18v3.24c0 .31.21.67.8.55A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a class="dev-icon" href="https://dev.to/ertugrulmutlu/series/45513" target="_blank" rel="noopener noreferrer" aria-label="DEV.to series">DEV</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="accent-rule" aria-hidden="true"></span> Engineering <span>×</span> Code <span>×</span> Real-world results</p>
+          <h1 id="hero-title">From Lab to <span>Code</span></h1>
+          <p class="hero-tagline">Small engineering projects. Real implementations. Clear results.</p>
+          <p class="hero-description">Engineering ideas turned into practical code, with detailed technical write-ups for curious minds.</p>
+          <div class="hero-links">
+            <a href="https://github.com/Ertugrulmutlu/from-lab-to-code" class="btn btn-white" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.63 22.41c.58.1.79-.25.79-.55v-2.2c-3.22.7-3.91-1.37-3.91-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.06-.72.08-.71.08-.71 1.18.08 1.8 1.21 1.8 1.21 1.04 1.79 2.74 1.28 3.41.97.11-.75.41-1.28.73-1.56-2.56-.29-5.25-1.28-5.25-5.73 0-1.26.45-2.31 1.2-3.12-.12-.29-.51-1.48.12-3.08 0 0 .98-.32 3.2 1.2a11 11 0 0 1 5.82 0c2.22-1.52 3.2-1.2 3.2-1.2.63 1.6.24 2.79.12 3.08.75.81 1.2 1.86 1.2 3.12 0 4.46-2.7 5.43-5.27 5.72.42.37.79 1.09.79 2.18v3.24c0 .31.21.67.8.55A11.5 11.5 0 0 0 12 .5Z"/></svg><span>GitHub</span><span aria-hidden="true" class="button-arrow">→</span></a>
+            <a href="https://dev.to/ertugrulmutlu/series/45513" class="btn btn-ghost" target="_blank" rel="noopener noreferrer"><span class="dev-mini">DEV</span><span>DEV.to Series</span><span aria-hidden="true" class="button-arrow">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured" id="featured" aria-label="Featured project">
+        <div class="featured-info">
+          <p class="featured-kicker"><span aria-hidden="true">☆</span> Featured project</p>
+          <h2 id="featured-title">Project #01 — Classical Computer Vision</h2>
+          <p id="featured-subtitle" class="featured-subtitle"></p>
+          <p id="featured-description" class="featured-description"></p>
+          <div class="featured-links" id="featured-actions"></div>
+        </div>
+        <div class="featured-showcase" id="featured-visual" aria-label="Real image-processing demonstration examples"></div>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-heading">
+        <h2 class="sr-only" id="projects-heading">All projects</h2>
+        <div class="toolbar">
+          <div class="filters" id="category-filters" role="group" aria-label="Filter projects by category"></div>
+          <span id="project-count" class="project-count" aria-live="polite"></span>
+        </div>
+        <div id="project-grid" class="project-grid"></div>
+        <p class="collection-note">Only published projects have active GitHub and article links. Other cards are future concept placeholders.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="about">
+      <p><span class="mini-code">&lt;/&gt;</span><strong>Build. Visualize. Explain.</strong><span class="foot-muted">Independent engineering mini-projects and original examples.</span></p>
+      <div><a href="https://github.com/Ertugrulmutlu/from-lab-to-code" target="_blank" rel="noopener noreferrer">Source code ↗</a><a href="https://dev.to/ertugrulmutlu/series/45513" target="_blank" rel="noopener noreferrer">Technical writing ↗</a></div>
+    </footer>
+  </div>
+</body>
+</html>
