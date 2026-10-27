@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+:root { color-scheme:dark; --bg:#0c1a24; --line:#253948; --muted:#91a7b7; --a:#54dccb; --b:#ffbe7a; }
+*{box-sizing:border-box}
+html,body{width:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:transparent;color:#eaf5fa}
+.card{position:relative;background:linear-gradient(140deg,#102432,#0a1720);border:1px solid #2b4152;border-radius:19px;min-height:349px;overflow:hidden}
+.card::before{content:'';position:absolute;top:-105px;right:-90px;width:210px;height:210px;border-radius:100%;background:radial-gradient(circle,rgba(84,220,203,.08),transparent 66%);pointer-events:none}
+.header{position:absolute;top:17px;left:21px;right:20px;display:flex;align-items:center;justify-content:space-between;z-index:1}
+.eyebrow{font-size:11px;letter-spacing:.18em;font-weight:800;color:#9db4c1}
+.hint{font-size:11px;color:#91a7b7;text-align:right}
+svg{display:block;width:100%;height:308px;margin-top:32px;touch-action:none;user-select:none}
+.guide{stroke:#344c5d;stroke-width:1;fill:none}
+.guide.dash{stroke-dasharray:4 6;opacity:.72}
+.card text{font-family:inherit}
+.label{font-size:11px;letter-spacing:.13em;fill:#87a2b3;font-weight:700}
+.number{font-size:12px;fill:#eaf5fa;font-weight:800}
+.head{fill:#1b3544;stroke:#536e7d;stroke-width:1.4}
+.ears{fill:#254555;stroke:#6f8a99;stroke-width:1.4}
+.nose{fill:none;stroke:#adc6d0;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.arm{stroke-width:2.2;stroke-dasharray:5 6;opacity:.72}
+.pin{cursor:grab;outline:0;transition:filter .15s}
+.pin:focus-visible{filter:drop-shadow(0 0 7px #fff)}
+.pin:active{cursor:grabbing}
+.pin-halo{opacity:.16}
+.pin-disc{stroke:#08202b;stroke-width:2.5}
+.pin-letter{fill:#0b1c27;font-size:13px;font-weight:900;pointer-events:none;text-anchor:middle;dominant-baseline:central}
+.footer{position:absolute;left:18px;bottom:13px;right:18px;display:flex;gap:8px;justify-content:space-between;align-items:center;font-size:11px;color:#9bb1bf}
+.chips{display:flex;gap:7px}
+.chip{border:1px solid #344d5c;border-radius:6px;padding:4px 8px;background:#142b37;font-variant-numeric:tabular-nums}
+.chip strong{font-weight:800;color:white}
+.a-dot,.b-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}
+.a-dot{background:var(--a)}.b-dot{background:var(--b)}
+@media(max-width:430px){.header{left:13px;right:12px}.hint{font-size:10px}.footer{left:10px;right:10px}.chip{padding:4px 6px;font-size:10px}}
+</style>
+</head>
+<body>
+<div class="card">
+ <div class="header"><span class="eyebrow">TOP-DOWN SOUND FIELD</span><span class="hint">Drag a source · arrows adjust by 5°</span></div>
+ <svg id="stage" viewBox="0 0 500 330" role="group" aria-label="Top-down virtual acoustic scene with draggable sound sources">
+  <defs><radialGradient id="aura"><stop offset="0" stop-color="#4ed4c2" stop-opacity=".065"/><stop offset="1" stop-color="#4ed4c2" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="250" cy="161" r="130" fill="url(#aura)"/>
+  <circle cx="250" cy="161" r="115" class="guide dash"/>
+  <circle cx="250" cy="161" r="75" class="guide dash"/>
+  <path d="M250 24 V297 M112 161 H388" class="guide dash" opacity=".4"/>
+  <text x="250" y="20" class="label" text-anchor="middle">FRONT · 0°</text>
+  <text x="88" y="165" class="label" text-anchor="middle">LEFT</text>
+  <text x="412" y="165" class="label" text-anchor="middle">RIGHT</text>
+  <text x="250" y="315" class="label" text-anchor="middle">BACK · ±180°</text>
+  <ellipse cx="250" cy="161" rx="38" ry="48" class="head"/>
+  <ellipse cx="209" cy="160" rx="8" ry="15" class="ears"/>
+  <ellipse cx="291" cy="160" rx="8" ry="15" class="ears"/>
+  <path d="M243 132 L250 122 L257 132" class="nose"/>
+  <path d="M239 184 Q250 190 261 184" fill="none" stroke="#7e9bab" stroke-width="1.2"/>
+  <text x="250" y="216" class="label" text-anchor="middle" font-size="10">LISTENER</text>
+  <line id="line-a" x1="250" y1="161" x2="132" y2="116" class="arm" stroke="#54dccb"/>
+  <line id="line-b" x1="250" y1="161" x2="368" y2="116" class="arm" stroke="#ffbe7a"/>
+  <g id="pin-a" class="pin" tabindex="0" role="slider" aria-label="Source A azimuth" aria-valuemin="-180" aria-valuemax="180">
+    <circle r="24" class="pin-halo" fill="#54dccb"/>
+    <circle r="16" class="pin-disc" fill="#54dccb"/>
+    <text class="pin-letter">A</text>
+  </g>
+  <g id="pin-b" class="pin" tabindex="0" role="slider" aria-label="Source B azimuth" aria-valuemin="-180" aria-valuemax="180">
+    <circle r="24" class="pin-halo" fill="#ffbe7a"/>
+    <circle r="16" class="pin-disc" fill="#ffbe7a"/>
+    <text class="pin-letter">B</text>
+  </g>
+ </svg>
+ <div class="footer"><div class="chips"><span class="chip"><i class="a-dot"></i>A <strong id="value-a">+70°</strong></span><span class="chip" id="chip-b"><i class="b-dot"></i>B <strong id="value-b">−70°</strong></span></div><span>Listener facing forward</span></div>
+</div>
+<script>
+(() => {
+  const ORIGIN={x:250,y:161}, R=115;
+  const svg=document.getElementById('stage');
+  let a=70,b=-70,enabled=true,active='a',dragging=null;
+  const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
+  const fmt=v=>(v>0?'+':'')+String(v)+'°';
+  const xy=az=>({x:ORIGIN.x-R*Math.sin(az*Math.PI/180),y:ORIGIN.y-R*Math.cos(az*Math.PI/180)});
+  function render(){
+    for(const [id,az] of [['a',a],['b',b]]){
+      const el=document.getElementById('pin-'+id),ln=document.getElementById('line-'+id),p=xy(az);
+      el.setAttribute('transform',`translate(${p.x},${p.y})`);
+      el.setAttribute('aria-valuenow',String(az));
+      el.setAttribute('aria-valuetext',fmt(az));
+      ln.setAttribute('x2',String(p.x));ln.setAttribute('y2',String(p.y));
+      const visible=id!=='b'||enabled;
+      el.style.display=visible?'':'none';ln.style.display=visible?'':'none';
+    }
+    document.getElementById('chip-b').style.display=enabled?'':'none';
+    document.getElementById('value-a').textContent=fmt(a);
+    document.getElementById('value-b').textContent=fmt(b);
+  }
+  function send(){
+    window.parent.postMessage({isStreamlitMessage:true,type:'streamlit:setComponentValue',dataType:'json',value:{az_a:a,az_b:b,active:active,nonce:Date.now()+Math.random()}},'*');
+  }
+  function pointerAngle(e){
+    const pt=svg.createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;
+    const transform=svg.getScreenCTM();if(!transform)return null;
+    const p=pt.matrixTransform(transform.inverse());
+    const degree=Math.atan2(ORIGIN.x-p.x,ORIGIN.y-p.y)*180/Math.PI;
+    return clamp(Math.round(degree/5)*5,-180,180);
+  }
+  for(const id of ['a','b']){
+    const el=document.getElementById('pin-'+id);
+    el.addEventListener('pointerdown',e=>{if(id==='b'&&!enabled)return;dragging=id;active=id;el.setPointerCapture(e.pointerId);e.preventDefault()});
+    el.addEventListener('pointermove',e=>{if(dragging!==id)return;const val=pointerAngle(e);if(val===null)return;if(id==='a')a=val;else b=val;render()});
+    el.addEventListener('pointerup',e=>{if(dragging!==id)return;dragging=null;send()});
+    el.addEventListener('pointercancel',()=>{dragging=null});
+    el.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){
+      const step=(e.key==='ArrowLeft'||e.key==='ArrowUp')?5:-5;
+      if(id==='a')a=clamp(a+step,-180,180);else b=clamp(b+step,-180,180);
+      active=id;render();send();e.preventDefault();
+    }});
+  }
+  window.addEventListener('message',e=>{
+    if(!e.data||e.data.type!=='streamlit:render'||dragging)return;
+    const args=e.data.args||{};
+    if(Number.isFinite(args.az_a))a=args.az_a;
+    if(Number.isFinite(args.az_b))b=args.az_b;
+    if(typeof args.enable_b==='boolean')enabled=args.enable_b;
+    if(typeof args.active==='string')active=args.active;
+    render();
+    window.parent.postMessage({isStreamlitMessage:true,type:'streamlit:setFrameHeight',height:349},'*');
+  });
+  render();
+  window.parent.postMessage({isStreamlitMessage:true,type:'streamlit:componentReady',apiVersion:1},'*');
+  window.parent.postMessage({isStreamlitMessage:true,type:'streamlit:setFrameHeight',height:349},'*');
+})();
+</script>
+</body>
+</html>
