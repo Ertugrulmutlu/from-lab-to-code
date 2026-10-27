@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102644"/><stop offset="1" stop-color="#070e22"/></linearGradient>
+<pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#33506d" opacity=".23"/></pattern></defs>
+<rect width="300" height="300" rx="23" fill="url(#bg)"/><rect x="14" y="14" width="272" height="272" rx="18" fill="url(#grid)" stroke="#426487" stroke-opacity=".6"/>
+
+<text x="32" y="44" fill="#a4c1dd" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">CROSS-CORRELATION</text>
+<path d="M36 99H264M36 150H264M36 208H264M36 260H264" stroke="#52728b" stroke-opacity=".48"/>
+<polyline points="36,99 65,99 78,71 92,127 106,99 132,99 158,99 190,99 234,99 264,99" fill="none" stroke="#55c7f2" stroke-width="3.3" stroke-linejoin="round"/>
+<polyline points="36,150 85,150 114,150 128,119 143,179 157,150 174,150 202,137 216,163 230,150 264,150" fill="none" stroke="#b28dff" stroke-width="3.3" stroke-linejoin="round"/>
+<text x="36" y="195" fill="#83a6c6" font-family="Arial,sans-serif" font-size="12">MATCH SCORE</text>
+<polyline points="38,258 65,258 89,258 103,255 111,235 121,207 130,239 137,255 181,257 192,247 201,226 209,251 220,258 263,258" fill="none" stroke="#39e5c7" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M121 200V266M201 214V266" stroke="#9bd4ea" stroke-opacity=".6" stroke-dasharray="4 5"/><circle cx="121" cy="207" r="5" fill="#39e5c7"/><circle cx="201" cy="226" r="5" fill="#39e5c7"/>
+</svg>

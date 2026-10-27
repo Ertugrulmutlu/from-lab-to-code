@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102644"/><stop offset="1" stop-color="#070e22"/></linearGradient>
+<pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#33506d" opacity=".23"/></pattern></defs>
+<rect width="300" height="300" rx="23" fill="url(#bg)"/><rect x="14" y="14" width="272" height="272" rx="18" fill="url(#grid)" stroke="#426487" stroke-opacity=".6"/>
+
+<text x="32" y="44" fill="#a4c1dd" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">ITD + ILD</text>
+<circle cx="150" cy="139" r="73" fill="none" stroke="#547c9e" stroke-opacity=".35" stroke-dasharray="5 5"/>
+<ellipse cx="150" cy="139" rx="46" ry="59" fill="#1c3e55" stroke="#7ab0d6" stroke-width="3"/>
+<ellipse cx="101" cy="139" rx="9" ry="18" fill="#2f7994" stroke="#5cdef1" stroke-width="3"/>
+<ellipse cx="199" cy="139" rx="9" ry="18" fill="#73404f" stroke="#ff9369" stroke-width="3"/>
+<path d="M139 102l11-15 11 15M138 161q12 10 24 0" fill="none" stroke="#d2e9ff" stroke-width="3"/>
+<circle cx="48" cy="97" r="12" fill="#5dd8fb"/><path d="M61 96Q79 106 82 120M63 86Q88 100 91 120" fill="none" stroke="#5dd8fb" stroke-width="3"/>
+<text x="32" y="222" fill="#8bb2d0" font-family="Arial,sans-serif" font-size="12">LEFT</text>
+<text x="211" y="222" fill="#8bb2d0" font-family="Arial,sans-serif" font-size="12">RIGHT</text>
+<path d="M32 244h21l8-14 7 29 8-15h26" fill="none" stroke="#5ad8f7" stroke-width="3"/>
+<path d="M197 244h30l8-10 6 21 7-11h17" fill="none" stroke="#fa8f81" stroke-width="3"/>
+<text x="118" y="278" fill="#d7f1ff" font-family="Arial,sans-serif" font-size="16">Δt  /  ΔL</text>
+</svg>
