@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#08101b" />
+  <meta name="description" content="A browser-based industrial robot sorting simulation powered by a Python controller." />
+  <title>Robot Cell Playground — From Lab to Code #03</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <script type="importmap">
+  {"imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/"
+  }}
+  </script>
+  <script type="module" src="/static/js/main.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark">&lt;/&gt;</div><div><span class="brand-name">FROM LAB TO CODE</span><span class="brand-sub">EXPERIMENT 03 / ROBOTICS</span></div></div>
+      <div class="top-links"><span class="local-tag"><span class="online-dot"></span>LOCAL SIMULATION</span><a href="https://github.com/Ertugrulmutlu/from-lab-to-code" target="_blank" rel="noopener">GITHUB ↗</a></div>
+    </header>
+    <section class="intro">
+      <div><div class="eyebrow">INTERACTIVE ENGINEERING LAB <span class="tiny-sep">/</span> 01 — ROBOTICS</div><h1>Robot Cell <span>Playground.</span></h1><p>See how sensing, kinematics and state machines turn a conveyor and robot arm into an automated sorting cell.</p></div>
+      <div class="intro-note"><span class="note-number">3</span><span>COLOR CHANNELS<br/><small>ONE CONTROL LOOP</small></span></div>
+    </section>
+    <main class="dashboard">
+      <section class="viewport-card" aria-label="Interactive 3D simulation">
+        <div class="viewport-top"><span><span class="live-pulse"></span> LIVE CELL VIEW <small>· ISOMETRIC 3D</small></span><span class="viewport-hint">DRAG TO ORBIT · SCROLL TO ZOOM</span></div>
+        <div class="viewport-wrap" id="viewport"><div class="initial-loading" id="loading">INITIALIZING 3D CELL…</div><div class="view-bottom"><span>SIMULATED DIGITAL CELL / NOT A PHYSICS ENGINE</span><button id="camera" class="camera-btn" type="button">RESET VIEW ↺</button></div></div>
+        <div class="legend"><span><i style="background:#fa6770"></i>RED</span><span><i style="background:#52d8a9"></i>GREEN</span><span><i style="background:#66a8ff"></i>BLUE</span><span class="legend-tip">3-DOF planar arm + rotating base</span></div>
+      </section>
+      <aside class="control-panel">
+        <section class="panel-section">
+          <div class="panel-heading">01 <span>SIMULATION CONTROL</span></div>
+          <div class="phase-head"><div><span class="field-label">CURRENT STATE</span><div class="phase-value" id="phase">IDLE</div></div><span class="status-bubble" id="run-state">STOPPED</span></div>
+          <div class="main-actions"><button id="run" type="button" class="btn-primary">▶ START CELL</button><button id="pause" type="button" class="btn-outline">Ⅱ PAUSE</button></div>
+          <button id="reset" type="button" class="btn-reset">↺ RESET SIMULATION</button>
+          <div class="setting"><label for="color">GENERATE NEXT</label><select id="color"><option value="random">Random colors</option><option value="red">Red only</option><option value="green">Green only</option><option value="blue">Blue only</option></select></div>
+          <div class="setting"><div class="speed-row"><label for="speed">SIMULATION SPEED</label><span id="speed-value">1.00×</span></div><input type="range" min="0.25" max="3" step="0.25" value="1" id="speed"/><div class="speed-ticks"><span>0.25×</span><span>3×</span></div></div>
+        </section>
+        <section class="panel-section panel-section-dark">
+          <div class="panel-heading">02 <span>SENSOR & ROBOT DATA</span></div>
+          <div class="data-row"><span>COLOR SENSOR</span><strong id="detected">—</strong></div>
+          <div class="data-row"><span>VACUUM GRIPPER</span><strong id="gripper">OPEN</strong></div>
+          <div class="data-row"><span>BASE YAW</span><strong id="yaw">0.0°</strong></div>
+          <div class="data-row"><span>SHOULDER</span><strong id="shoulder">0.0°</strong></div>
+          <div class="data-row"><span>ELBOW</span><strong id="elbow">0.0°</strong></div>
+        </section>
+        <section class="panel-section panel-section-bottom"><div class="panel-heading">03 <span>SORTING OUTPUT</span></div><div class="big-count" id="total">00 <small>ITEMS SORTED</small></div><div class="count-row"><span><i class="dot red"></i>RED</span><strong id="count-red">0</strong></div><div class="count-row"><span><i class="dot green"></i>GREEN</span><strong id="count-green">0</strong></div><div class="count-row"><span><i class="dot blue"></i>BLUE</span><strong id="count-blue">0</strong></div><div class="count-row error-row"><span>MIS-SORTED</span><strong id="missorted">0</strong></div></section>
+      </aside>
+    </main>
+    <section class="wiring-card" id="wiring-lab" aria-labelledby="wiring-title">
+      <div class="wiring-head">
+        <div>
+          <div class="panel-heading">04 <span>INTERACTIVE DIGITAL I/O</span></div>
+          <h2 id="wiring-title">Wiring Lab <span>· Connect the cell.</span></h2>
+          <p>Signals flow from an <strong>output (left)</strong> to an <strong>input (right)</strong>. Select an output, then click a target input to connect it. Click an input without a selected output to disconnect its wire.</p>
+        </div>
+        <div class="wiring-actions">
+          <label for="io-preset">TRY A FAULT SCENARIO</label>
+          <select id="io-preset">
+            <option value="missing_belt">Unplug the conveyor</option>
+            <option value="missing_position">Unplug the position sensor</option>
+            <option value="missing_gripper">Unplug the gripper</option>
+            <option value="swapped_colors">Swap red / blue sensors</option>
+          </select>
+          <div class="wiring-action-row"><button type="button" id="io-apply">APPLY</button><button type="button" id="io-restore">↺ DEFAULT WIRING</button></div>
+        </div>
+      </div>
+      <div class="io-hint" id="io-hint" role="status">Pause the simulation to edit wiring. Rewiring resets the current run.</div>
+      <div class="io-board" id="io-board">
+        <svg class="io-wires" id="io-wires" aria-hidden="true"></svg>
+        <div class="io-column"><h3>OUTPUT PORTS <small>CLICK SOURCE</small></h3><div id="io-outputs" class="io-port-list"></div></div>
+        <div class="io-column"><h3>INPUT PORTS <small>CLICK DESTINATION</small></h3><div id="io-inputs" class="io-port-list"></div></div>
+      </div>
+      <div class="io-diagnostic"><div><span class="io-diagnostic-kicker">LIVE CONTROLLER DIAGNOSTIC</span><strong id="io-diagnostic">Loading I/O levels…</strong></div><div class="io-legend"><span><i class="io-key active"></i>HIGH (1)</span><span><i class="io-key"></i>LOW (0)</span><span><i class="io-key missing"></i>OPEN</span></div></div>
+    </section>
+    <section class="bottom-layout"><div class="event-card"><div class="panel-heading">05 <span>EVENT STREAM</span></div><ol id="events" class="event-list"><li>Waiting for simulation…</li></ol></div><div class="info-card"><div class="panel-heading">06 <span>UNDER THE HOOD</span></div><p><strong>Python controls the cell.</strong> A finite-state machine advances the conveyor, reads input levels routed through your I/O wiring, computes inverse kinematics and selects the destination. Three.js only visualizes the returned state.</p><div class="info-footer">FORWARD / INVERSE KINEMATICS <span>·</span> IDEALIZED SENSORS <span>·</span> STATE MACHINE</div></div></section>
+    <footer class="footer"><span>FROM LAB TO CODE / ORIGINAL INDEPENDENT IMPLEMENTATION</span><span>BUILT FOR LEARNING · NO HARDWARE REQUIRED</span></footer>
+  </div>
+  <div id="toast" role="alert" aria-live="polite" class="toast" hidden></div>
+</body>
+</html>

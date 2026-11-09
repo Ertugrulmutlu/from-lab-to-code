@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="240" viewBox="0 0 980 240" role="img" aria-label="Robot cell control architecture">
+  <rect width="980" height="240" rx="20" fill="#0c1725"/>
+  <text x="38" y="39" fill="#60d9ca" font-size="15" font-family="Arial" letter-spacing="2" font-weight="bold">ROBOT CELL / CONTROL LOOP</text>
+  <g font-family="Arial" font-size="15" text-anchor="middle">
+    <rect x="35" y="76" width="184" height="100" rx="10" fill="#183247" stroke="#3a6178"/>
+    <text x="127" y="115" fill="#e6f8ff" font-weight="bold">CONVEYOR</text><text x="127" y="142" fill="#a3bece" font-size="12">Moving colored part</text>
+    <rect x="274" y="76" width="184" height="100" rx="10" fill="#183247" stroke="#3a6178"/>
+    <text x="366" y="115" fill="#e6f8ff" font-weight="bold">SENSORS</text><text x="366" y="142" fill="#a3bece" font-size="12">Position + color</text>
+    <rect x="514" y="76" width="184" height="100" rx="10" fill="#164139" stroke="#4fae99"/>
+    <text x="606" y="115" fill="#e6f8ff" font-weight="bold">PYTHON FSM</text><text x="606" y="142" fill="#b2dcd1" font-size="12">Kinematics + motion</text>
+    <rect x="753" y="76" width="190" height="100" rx="10" fill="#183247" stroke="#3a6178"/>
+    <text x="848" y="115" fill="#e6f8ff" font-weight="bold">3D VISUALIZER</text><text x="848" y="142" fill="#a3bece" font-size="12">Three.js browser UI</text>
+  </g>
+  <g stroke="#58daca" stroke-width="3" fill="none"><path d="M219 125 H274"/><path d="m263 119 11 6 -11 6"/><path d="M458 125 H514"/><path d="m503 119 11 6 -11 6"/><path d="M698 125 H753"/><path d="m742 119 11 6 -11 6"/></g>
+  <text x="36" y="216" fill="#607b92" font-size="12" font-family="Arial">Original educational model · no hardware · no CIROS assets</text>
+</svg>
