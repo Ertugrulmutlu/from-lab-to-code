@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" role="img" aria-label="Micro CNN 55860 MACs versus 75000 MAC educational budget">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1630"/><stop offset="1" stop-color="#1e1c41"/></linearGradient><linearGradient id="bar"><stop stop-color="#6e67fd"/><stop offset="1" stop-color="#41e5ce"/></linearGradient></defs><rect width="480" height="480" rx="24" fill="url(#bg)"/>
+<g font-family="Inter,Segoe UI,Arial"><text x="30" y="48" font-size="21" font-weight="800" fill="#cbbaff" letter-spacing="1.4">COMPUTE BUDGET</text><text x="30" y="78" fill="#b7c6e0" font-size="16">Illustrative budget: 75,000 MACs</text></g>
+<text x="35" y="150" font-size="21" fill="#f7f7ff" font-weight="700" font-family="Arial">MICRO CNN</text>
+<rect x="35" y="175" width="407" height="54" rx="10" fill="#182744" stroke="#51678b" stroke-width="2"/><rect x="37" y="177" width="302" height="50" rx="9" fill="url(#bar)"/><text x="55" y="210" font-size="25" font-weight="800" fill="#06132d" font-family="Arial">55,860 MACs</text>
+<text x="36" y="270" font-size="20" fill="#61f0c9" font-weight="800" font-family="Arial">WITHIN BUDGET</text><text x="36" y="302" font-size="17" fill="#bac9e9" font-family="Arial">96.67% test accuracy</text>
+<path d="M35 335H445" stroke="#435477" stroke-width="2"/>
+<text x="35" y="373" font-size="18" fill="#c9d1e8" font-family="Arial">WIDE CNN</text><text x="443" y="373" text-anchor="end" font-size="20" font-weight="700" fill="#ec9bca" font-family="Arial">1,031,744 MACs</text>
+<rect x="35" y="391" width="407" height="20" rx="10" fill="#49335c"/><rect x="35" y="391" width="407" height="20" rx="10" fill="#bb69d8"/>
+<text x="35" y="450" font-size="15" fill="#aebdd9" font-family="Arial">Estimated arithmetic, not measured latency</text>
+</svg>

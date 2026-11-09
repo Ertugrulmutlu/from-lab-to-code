@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" role="img" aria-label="Measured accuracy versus multiply-accumulate operations for three CNN models">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#091729"/><stop offset="1" stop-color="#21163f"/></linearGradient></defs>
+<rect width="480" height="480" rx="24" fill="url(#bg)"/>
+<g font-family="Inter,Segoe UI,Arial"><text x="29" y="47" font-size="21" fill="#d2bbff" font-weight="800" letter-spacing="1.5">ACCURACY VS. MACs</text><text x="30" y="78" font-size="15" fill="#a8b8d4">Measured MNIST test results</text></g>
+<g stroke="#324160" stroke-width="1"><path d="M74 120H433M74 181H433M74 242H433M74 303H433M74 364H433"/><path d="M74 120V364M190 120V364M306 120V364M432 120V364"/></g>
+<path d="M74 118V366H433" stroke="#92a7ce" stroke-width="3" fill="none"/>
+<g font-size="15" font-family="Arial" fill="#b8cbea"><text x="29" y="126">99%</text><text x="29" y="248">98%</text><text x="29" y="370">97%</text><text x="77" y="399">55.9K</text><text x="213" y="399">290K</text><text x="363" y="399">1.03M</text></g>
+<path d="M101 339L258 218L410 130" stroke="#d1a0ff" stroke-dasharray="9 9" stroke-width="3" fill="none" opacity=".7"/>
+<circle cx="101" cy="339" r="14" fill="#b57aff" stroke="#eee4ff" stroke-width="4"/><circle cx="258" cy="218" r="14" fill="#54d4ef" stroke="#e2fbff" stroke-width="4"/><circle cx="410" cy="130" r="14" fill="#4febae" stroke="#dcffef" stroke-width="4"/>
+<g font-size="17" font-weight="700" font-family="Arial" fill="#f3f8ff"><text x="116" y="318">96.67%</text><text x="271" y="199">97.92%</text><text x="313" y="106">98.63%</text></g>
+<text x="240" y="448" font-size="17" fill="#bdc7e2" font-family="Arial" text-anchor="middle">Arithmetic cost →</text>
+</svg>
