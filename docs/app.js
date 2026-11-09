@@ -26,7 +26,7 @@ const PROJECTS = [
     description: 'Hear how signal processing creates directional sound: drag two virtual sources, compare mono and binaural playback, and inspect timing and level differences between the ears.',
     githubUrl: 'https://github.com/Ertugrulmutlu/from-lab-to-code/tree/main/02-spatial-audio',
     articleUrl: 'https://dev.to/ertugrulmutlu/from-lab-to-code-2-exploring-spatial-audio-with-python-and-scipy-3kcj',
-    status: 'published', featured: true, icon: 'audio', accent: 'violet',
+    status: 'published', featured: false, icon: 'audio', accent: 'violet',
     previewSteps: ['Correlation', 'ITD / ILD', 'Binaural Mix', 'Soundstage'],
     previewImages: [
       'assets/spatial-correlation.svg',
@@ -35,7 +35,22 @@ const PROJECTS = [
       'assets/spatial-soundstage.svg'
     ]
   },
-  {id:'03',title:'Signal Correlation',short:'Cross-correlation · Time Delay · FFT',category:'Signal Processing',description:'Visualizing patterns and shifts in signals.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'wave',accent:'orange'},
+  {
+    id: '03', title: 'Robot Cell Playground',
+    short: 'Kinematics · Digital I/O · Sorting FSM',
+    category: 'Robotics',
+    description: 'Explore a Python-controlled sorting cell: model a 3-DOF arm, rewire digital signals, and inject faults in an interactive local 3D simulation.',
+    githubUrl: 'https://github.com/Ertugrulmutlu/from-lab-to-code/tree/main/03-robot-cell',
+    articleUrl: 'https://dev.to/ertugrulmutlu/from-lab-to-code-3-building-an-interactive-robot-cell-with-python-and-threejs-2953',
+    status: 'published', featured: true, icon: 'robot', accent: 'amber',
+    previewSteps: ['Kinematics', 'Control FSM', 'Digital I/O', 'Color Sorting'],
+    previewImages: [
+      'assets/robot-kinematics.svg',
+      'assets/robot-controller.svg',
+      'assets/robot-wiring.svg',
+      'assets/robot-sorting.svg'
+    ]
+  },
   {id:'04',title:'Embedded Sensing',short:'IMU · I²C · Data Logging',category:'Embedded',description:'Reading, processing, and visualizing sensor data.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'chip',accent:'mint'},
   {id:'05',title:'Control Basics',short:'PID · Simulation · Feedback',category:'Control',description:'Learning how feedback changes system behavior.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'gauge',accent:'lavender'},
   {id:'06',title:'Image Processing Pipeline',short:'Filtering · Edges · Morphology',category:'Computer Vision',description:'Experimenting with practical vision pipelines.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'layers',accent:'teal'},

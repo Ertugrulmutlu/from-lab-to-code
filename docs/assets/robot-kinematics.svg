@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="0 0 520 520">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#172e49"/><stop offset="1" stop-color="#09172a"/></linearGradient>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#46708b" stroke-width=".6" opacity=".28"/></pattern></defs>
+<rect width="520" height="520" fill="url(#g)"/><rect width="520" height="520" fill="url(#grid)"/>
+<rect x="18" y="18" width="484" height="484" rx="20" fill="none" stroke="#436c88" stroke-width="2"/>
+<text x="43" y="65" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="700" fill="#d6f1ff">01 / KINEMATICS</text>
+<path d="M43 83H477" stroke="#426783" stroke-width="2"/>
+
+<path d="M102 385H420" stroke="#4a7993" stroke-width="6"/>
+<rect x="104" y="352" width="99" height="32" rx="7" fill="#31516d" stroke="#7ba6c4" stroke-width="3"/>
+<path d="M152 353L248 213L370 273" fill="none" stroke="#0b1b29" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M152 353L248 213L370 273" fill="none" stroke="#b9dce7" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M152 353L248 213L370 273" fill="none" stroke="#3adfc8" stroke-width="3"/>
+<g fill="#1a5570" stroke="#68dbdf" stroke-width="6"><circle cx="152" cy="353" r="25"/><circle cx="248" cy="213" r="25"/><circle cx="370" cy="273" r="21"/></g>
+<path d="M370 275V320" stroke="#d1eafa" stroke-width="13" stroke-linecap="round"/>
+<path d="M352 321H388L377 343H362Z" fill="#56dfb1"/>
+<path d="M152 353H370V273" fill="none" stroke="#6e9eb4" stroke-width="2" stroke-dasharray="7 8"/>
+<g fill="#eec075" font-family="Arial" font-size="22" font-weight="bold"><text x="83" y="336">q1</text><text x="183" y="299">q2</text><text x="280" y="200">q3</text></g>
+<text x="263" y="412" font-family="Arial" font-size="18" fill="#d0eeff">FK / IK · XYZ ↔ angles</text>
+
+<text x="44" y="475" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#91bbd2">FROM LAB TO CODE / 03</text>
+</svg>
