@@ -42,7 +42,7 @@ const PROJECTS = [
     description: 'Explore a Python-controlled sorting cell: model a 3-DOF arm, rewire digital signals, and inject faults in an interactive local 3D simulation.',
     githubUrl: 'https://github.com/Ertugrulmutlu/from-lab-to-code/tree/main/03-robot-cell',
     articleUrl: 'https://dev.to/ertugrulmutlu/from-lab-to-code-3-building-an-interactive-robot-cell-with-python-and-threejs-2953',
-    status: 'published', featured: true, icon: 'robot', accent: 'amber',
+    status: 'published', featured: false, icon: 'robot', accent: 'amber',
     previewSteps: ['Kinematics', 'Control FSM', 'Digital I/O', 'Color Sorting'],
     previewImages: [
       'assets/robot-kinematics.svg',
@@ -51,7 +51,22 @@ const PROJECTS = [
       'assets/robot-sorting.svg'
     ]
   },
-  {id:'04',title:'Embedded Sensing',short:'IMU · I²C · Data Logging',category:'Embedded',description:'Reading, processing, and visualizing sensor data.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'chip',accent:'mint'},
+  {
+    id: '04', title: 'Neural Network Efficiency Lab',
+    short: 'CNNs · Accuracy vs. MACs · Feature Maps',
+    category: 'Machine Learning',
+    description: 'Compare three trained PyTorch CNNs on MNIST, draw digits, inspect feature maps, and explore the trade-off between classification accuracy and computational cost.',
+    githubUrl: 'https://github.com/Ertugrulmutlu/from-lab-to-code/tree/main/04-neural-network-efficiency',
+    articleUrl: 'https://dev.to/ertugrulmutlu/from-lab-to-code-4-exploring-neural-network-efficiency-with-python-and-pytorch-1732',
+    status: 'published', featured: true, icon: 'brain', accent: 'lavender',
+    previewSteps: ['CNN Architecture', 'Measured Accuracy', 'Feature Maps', 'Compute Budget'],
+    previewImages: [
+      'assets/neural-architecture.svg',
+      'assets/neural-accuracy.svg',
+      'assets/neural-features.svg',
+      'assets/neural-budget.svg'
+    ]
+  },
   {id:'05',title:'Control Basics',short:'PID · Simulation · Feedback',category:'Control',description:'Learning how feedback changes system behavior.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'gauge',accent:'lavender'},
   {id:'06',title:'Image Processing Pipeline',short:'Filtering · Edges · Morphology',category:'Computer Vision',description:'Experimenting with practical vision pipelines.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'layers',accent:'teal'},
   {id:'07',title:'Robotics Kinematics',short:'Forward · Inverse · Geometry',category:'Robotics',description:'Exploring robotic geometry through code.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'robot',accent:'amber'},
@@ -59,7 +74,7 @@ const PROJECTS = [
   {id:'09',title:'System Simulation',short:'Modeling · Visualization · Analysis',category:'Simulation',description:'Turning mathematical models into experiments.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'chart',accent:'pink'}
 ];
 
-const CATEGORY_ORDER=['All','Computer Vision','Signal Processing','Audio','Embedded','Control','Robotics','Simulation'];
+const CATEGORY_ORDER=['All','Computer Vision','Machine Learning','Signal Processing','Audio','Embedded','Control','Robotics','Simulation'];
 const $ = (id) => document.getElementById(id);
 let activeCategory='All';
 
@@ -68,6 +83,7 @@ const ICONS = {
   audio:'<path d="M2 12h2m2-4v8m3-13v18m3-14v10m3-13v16m3-12v8m2-4h2"/>',
   wave:'<path d="M2 12h3l2-8 3 16 3-11 2 3h2l2-6 3 6"/>',
   chip:'<rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"/>',
+  brain:'<path d="M12 5c-2-3-6-2.5-7.2.5-3 .9-3.3 5.2-.5 7C2.5 16 6.3 20 10 18.7M12 5c2-3 6-2.5 7.2.5 3 .9 3.3 5.2.5 7 1.8 3.5-2 7.5-5.7 6.2M12 5v14"/><path d="M7 8c1.5 0 2.4 1 3 2m7-2c-1.5 0-2.4 1-3 2M7 14c1.5 0 2.4-1 3-2m7 2c-1.5 0-2.4-1-3-2"/>',
   gauge:'<path d="M4 18a9 9 0 1 1 16 0"/><path d="m12 14 5-5"/><circle cx="12" cy="14" r="1.5"/>',
   layers:'<path d="m12 2 10 6-10 6L2 8l10-6Zm-10 11 10 6 10-6M2 18l10 6 10-6"/>',
   robot:'<path d="M5 19h14M8 19v-3l4-3 3-5m-7 8-3-5m10-3 3-3M4 8h4l3 4"/><circle cx="15" cy="8" r="2"/><circle cx="5" cy="8" r="2"/><circle cx="19" cy="5" r="2"/>',

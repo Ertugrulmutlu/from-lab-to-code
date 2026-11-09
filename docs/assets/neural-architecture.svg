@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" role="img" aria-label="CNN layers from input digit to ten classes">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0a1228"/><stop offset="1" stop-color="#18234b"/></linearGradient><linearGradient id="a" x2="1" y2=".7"><stop stop-color="#9758ff"/><stop offset="1" stop-color="#63c6ff"/></linearGradient><filter id="blur"><feGaussianBlur stdDeviation="20"/></filter></defs>
+<rect width="480" height="480" rx="24" fill="url(#bg)"/><circle cx="325" cy="130" r="115" fill="#663cd5" opacity=".21" filter="url(#blur)"/>
+<g font-family="Inter,Segoe UI,Arial,sans-serif"><text x="30" y="46" fill="#d5baff" font-size="20" font-weight="800" letter-spacing="2">CNN ARCHITECTURE</text><text x="30" y="78" fill="#a6b2d6" font-size="15">28 × 28 grayscale input</text></g>
+<rect x="36" y="137" width="94" height="126" rx="8" fill="#101c39" stroke="#7968e8" stroke-width="2"/>
+<path d="M75 167h30l-20 32 20 31" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><text x="83" y="291" fill="#d4defe" font-size="18" text-anchor="middle" font-family="Arial">INPUT</text>
+<path d="M139 204h25" stroke="#a6c1ed" stroke-width="4"/><path d="m156 195 12 9-12 9" fill="none" stroke="#a6c1ed" stroke-width="4"/>
+<g transform="translate(182 139)"><rect x="22" y="-16" width="74" height="122" rx="8" fill="#3e2792" stroke="#b08afd" stroke-width="2"/><rect x="11" y="-7" width="74" height="122" rx="8" fill="#4532a5" stroke="#b08afd" stroke-width="2"/><rect width="74" height="122" rx="8" fill="url(#a)" stroke="#c2b7ff" stroke-width="2"/>
+<path d="M15 35 37 14l19 21-19 21-22-21m0 44 22-21 19 21" stroke="#eeeaff" opacity=".8" stroke-width="3" fill="none"/></g>
+<path d="M292 204h31" stroke="#a6c1ed" stroke-width="4"/><path d="m315 195 12 9-12 9" fill="none" stroke="#a6c1ed" stroke-width="4"/>
+<g transform="translate(347 151)" fill="#38c7f8" stroke="#8febff"><rect x="0" y="0" width="16" height="91" rx="4"/><rect x="23" y="8" width="16" height="75" rx="4"/><rect x="46" y="16" width="16" height="59" rx="4"/></g>
+<g font-size="16" font-family="Inter,Segoe UI,Arial" fill="#c1d5f2" text-anchor="middle"><text x="229" y="291">CONV + POOL</text><text x="382" y="291">FEATURES</text></g>
+<line x1="74" y1="343" x2="404" y2="343" stroke="#415478" stroke-width="2"/>
+<g font-family="Inter,Segoe UI,Arial" fill="#a7b8da" font-size="17"><text x="42" y="377">CONV 1</text><text x="196" y="377">CONV 2</text><text x="345" y="377">CLASSIFIER</text></g>
+<g fill="#7b65ff"><circle cx="90" cy="406" r="6"/><circle cx="111" cy="406" r="6"/><circle cx="132" cy="406" r="6"/><circle cx="245" cy="406" r="6"/><circle cx="266" cy="406" r="6"/><circle cx="287" cy="406" r="6"/></g><g fill="#48ddce"><circle cx="376" cy="394" r="6"/><circle cx="376" cy="415" r="6"/><circle cx="398" cy="394" r="6"/><circle cx="398" cy="415" r="6"/></g>
+</svg>
