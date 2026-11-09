@@ -1,0 +1,15 @@
+{
+  "experiment": "12 sequential boxes, fixed random seed 13",
+  "units": {
+    "time": "simulation seconds"
+  },
+  "sorted": 12,
+  "counts": {
+    "red": 4,
+    "green": 2,
+    "blue": 6
+  },
+  "elapsed_simulation_seconds": 112.32,
+  "controller_state_at_completion": "RETRACTING",
+  "note": "Idealized deterministic simulation, not physical robot performance"
+}
