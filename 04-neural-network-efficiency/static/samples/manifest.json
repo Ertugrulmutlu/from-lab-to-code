@@ -1,0 +1,105 @@
+{
+  "attribution": "MNIST test samples, \u00a9 Yann LeCun and Corinna Cortes; CC BY-SA 3.0; see DATA_CREDITS.md",
+  "samples": [
+    {
+      "id": "d0-1",
+      "label": 0,
+      "url": "/static/samples/d0-1.png"
+    },
+    {
+      "id": "d0-2",
+      "label": 0,
+      "url": "/static/samples/d0-2.png"
+    },
+    {
+      "id": "d1-1",
+      "label": 1,
+      "url": "/static/samples/d1-1.png"
+    },
+    {
+      "id": "d1-2",
+      "label": 1,
+      "url": "/static/samples/d1-2.png"
+    },
+    {
+      "id": "d2-1",
+      "label": 2,
+      "url": "/static/samples/d2-1.png"
+    },
+    {
+      "id": "d2-2",
+      "label": 2,
+      "url": "/static/samples/d2-2.png"
+    },
+    {
+      "id": "d3-1",
+      "label": 3,
+      "url": "/static/samples/d3-1.png"
+    },
+    {
+      "id": "d3-2",
+      "label": 3,
+      "url": "/static/samples/d3-2.png"
+    },
+    {
+      "id": "d4-1",
+      "label": 4,
+      "url": "/static/samples/d4-1.png"
+    },
+    {
+      "id": "d4-2",
+      "label": 4,
+      "url": "/static/samples/d4-2.png"
+    },
+    {
+      "id": "d5-1",
+      "label": 5,
+      "url": "/static/samples/d5-1.png"
+    },
+    {
+      "id": "d5-2",
+      "label": 5,
+      "url": "/static/samples/d5-2.png"
+    },
+    {
+      "id": "d6-1",
+      "label": 6,
+      "url": "/static/samples/d6-1.png"
+    },
+    {
+      "id": "d6-2",
+      "label": 6,
+      "url": "/static/samples/d6-2.png"
+    },
+    {
+      "id": "d7-1",
+      "label": 7,
+      "url": "/static/samples/d7-1.png"
+    },
+    {
+      "id": "d7-2",
+      "label": 7,
+      "url": "/static/samples/d7-2.png"
+    },
+    {
+      "id": "d8-1",
+      "label": 8,
+      "url": "/static/samples/d8-1.png"
+    },
+    {
+      "id": "d8-2",
+      "label": 8,
+      "url": "/static/samples/d8-2.png"
+    },
+    {
+      "id": "d9-1",
+      "label": 9,
+      "url": "/static/samples/d9-1.png"
+    },
+    {
+      "id": "d9-2",
+      "label": 9,
+      "url": "/static/samples/d9-2.png"
+    }
+  ]
+}

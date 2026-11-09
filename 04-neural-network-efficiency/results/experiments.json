@@ -1,0 +1,151 @@
+{
+  "dataset": "MNIST (LeCun and Cortes)",
+  "seed": 2026,
+  "split": {
+    "train": 54000,
+    "validation": 6000,
+    "test": 10000
+  },
+  "metrics_note": "Accuracy measured on held-out official test images. MACs are analytical conv/dense estimates, not measured latency or FLOPs.",
+  "epochs_limit": 4,
+  "models": [
+    {
+      "id": "micro",
+      "name": "Micro CNN",
+      "description": "A very small model under the 75k MAC budget.",
+      "channels": [
+        3,
+        6
+      ],
+      "kernel": 3,
+      "params": 3148,
+      "macs": {
+        "conv1": 21168,
+        "conv2": 31752,
+        "linear": 2940,
+        "total": 55860
+      },
+      "validation_accuracy": 0.963,
+      "test_accuracy": 0.9667,
+      "best_epoch": 4,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.84058,
+          "val_accuracy": 0.92017,
+          "val_loss": 0.28836
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.21619,
+          "val_accuracy": 0.94233,
+          "val_loss": 0.19067
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.15093,
+          "val_accuracy": 0.957,
+          "val_loss": 0.14449
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.11867,
+          "val_accuracy": 0.963,
+          "val_loss": 0.12628
+        }
+      ]
+    },
+    {
+      "id": "compact",
+      "name": "Compact CNN",
+      "description": "A practical balance between accuracy and compute.",
+      "channels": [
+        8,
+        16
+      ],
+      "kernel": 3,
+      "params": 9098,
+      "macs": {
+        "conv1": 56448,
+        "conv2": 225792,
+        "linear": 7840,
+        "total": 290080
+      },
+      "validation_accuracy": 0.97467,
+      "test_accuracy": 0.9792,
+      "best_epoch": 4,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.49662,
+          "val_accuracy": 0.9395,
+          "val_loss": 0.19904
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.14296,
+          "val_accuracy": 0.96533,
+          "val_loss": 0.11992
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.09599,
+          "val_accuracy": 0.97067,
+          "val_loss": 0.09608
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.07615,
+          "val_accuracy": 0.97467,
+          "val_loss": 0.0776
+        }
+      ]
+    },
+    {
+      "id": "wide",
+      "name": "Wide CNN",
+      "description": "A wider model with substantially higher compute.",
+      "channels": [
+        16,
+        32
+      ],
+      "kernel": 3,
+      "params": 20490,
+      "macs": {
+        "conv1": 112896,
+        "conv2": 903168,
+        "linear": 15680,
+        "total": 1031744
+      },
+      "validation_accuracy": 0.98283,
+      "test_accuracy": 0.9863,
+      "best_epoch": 4,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.37139,
+          "val_accuracy": 0.96167,
+          "val_loss": 0.12227
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.08925,
+          "val_accuracy": 0.974,
+          "val_loss": 0.08272
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.06384,
+          "val_accuracy": 0.9785,
+          "val_loss": 0.06004
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.05078,
+          "val_accuracy": 0.98283,
+          "val_loss": 0.054
+        }
+      ]
+    }
+  ]
+}
