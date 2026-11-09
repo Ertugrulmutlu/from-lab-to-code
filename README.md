@@ -13,6 +13,7 @@ A growing collection of self-contained Python projects that turn engineering con
 | 01 | [Image Processing — From Theory to Pixels](01-image-processing/) | Denoising, thresholding, connected components, Fourier filtering, K-means |
 | 02 | [Spatial Audio Playground — From Theory to Binaural Sound](02-spatial-audio/) | Cross-correlation, ITD/ILD, HRIR/HRTF, binaural convolution, interactive soundstage |
 | 03 | [Robot Cell Playground — From Kinematics to Automated Sorting](03-robot-cell/) | Forward/inverse kinematics, finite state machines, digital I/O wiring, sensor simulation, fault injection, Three.js |
+| 04 | [Neural Network Efficiency Lab — Accuracy vs. Compute](04-neural-network-efficiency/) | PyTorch, CNN architectures, MNIST classification, MAC estimation, feature maps, accuracy–compute trade-offs |
 
 Each project lives in its own folder with a README, runnable Python code, generated demonstrations, and automated tests. Follow the instructions in the project's README to run it locally.
 
@@ -29,6 +30,7 @@ Each project is accompanied by a technical article explaining the theory, implem
 | 01 | [Exploring Classical Computer Vision with Python and OpenCV](https://dev.to/ertugrulmutlu/from-lab-to-code-1-exploring-classical-computer-vision-with-python-and-opencv-3mcf) | [Image Processing](01-image-processing/) |
 | 02 | [Exploring Spatial Audio with Python and SciPy](https://dev.to/ertugrulmutlu/from-lab-to-code-2-exploring-spatial-audio-with-python-and-scipy-3kcj) | [Spatial Audio Playground](02-spatial-audio/) |
 | 03 | [Building an Interactive Robot Cell with Python and Three.js](https://dev.to/ertugrulmutlu/from-lab-to-code-3-building-an-interactive-robot-cell-with-python-and-threejs-2953) | [Robot Cell Playground](03-robot-cell/) |
+| 04 | [Exploring Neural Network Efficiency with Python and PyTorch](https://dev.to/ertugrulmutlu/from-lab-to-code-4-exploring-neural-network-efficiency-with-python-and-pytorch-1732) | [Neural Network Efficiency Lab](04-neural-network-efficiency/) |
 
 ## Approach
 
