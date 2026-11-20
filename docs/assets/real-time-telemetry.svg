@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" role="img" aria-label="Speed samples estimated without a blocking wait">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#091a37"/><stop offset="0.60" stop-color="#10244d"/><stop offset="1" stop-color="#171639"/></linearGradient>
+ <linearGradient id="ice" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ddcfb"/><stop offset="1" stop-color="#4a8dff"/></linearGradient>
+ <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#aa7eff"/><stop offset="1" stop-color="#6c69ec"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#4c729c" stroke-opacity=".15" stroke-width="1"/></pattern>
+</defs>
+<rect width="480" height="480" rx="24" fill="url(#bg)"/>
+<rect x="12" y="12" width="456" height="456" rx="17" fill="url(#grid)"/>
+<path d="M22 108H458" stroke="#35527c" stroke-width="2" opacity=".8"/>
+<g font-family="Arial,Segoe UI,sans-serif"><text x="28" y="49" font-size="20" fill="#83d2ff" font-weight="800" letter-spacing="1.5">SPEED TELEMETRY</text><text x="29" y="82" font-size="14" fill="#acc2e3">Fresh samples, fewer blind spots</text></g>
+
+<rect x="28" y="132" width="424" height="280" rx="17" fill="#08182e" stroke="#30547e" stroke-width="2"/>
+<g stroke="#304c70" stroke-width="1"><path d="M63 180H420M63 230H420M63 280H420M63 330H420M63 380H420"/><path d="M63 170V380M132 170V380M201 170V380M270 170V380M339 170V380M408 170V380"/></g>
+<path d="M64 172V382H420" stroke="#a3c3eb" stroke-width="3" fill="none"/>
+<path d="M67 347L113 329L166 286L219 259L272 240L324 240L374 281L415 346" fill="none" stroke="#7bd8ff" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<g fill="#0d274a" stroke="#b2ecff" stroke-width="4"><circle cx="113" cy="329" r="9"/><circle cx="166" cy="286" r="9"/><circle cx="219" cy="259" r="9"/><circle cx="272" cy="240" r="9"/><circle cx="324" cy="240" r="9"/><circle cx="374" cy="281" r="9"/></g>
+<rect x="126" y="151" width="192" height="43" rx="11" fill="#182f60" stroke="#9584ff" stroke-width="2"/>
+<circle cx="149" cy="172" r="6" fill="#54e4c6"/>
+<text x="168" y="177" fill="#ecf5ff" font-size="18" font-weight="700" font-family="Arial">NON-BLOCKING</text>
+<g font-family="Arial" fill="#aec8eb" font-size="14"><text x="36" y="160">v</text><text x="395" y="402">time</text></g>
+<rect x="140" y="421" width="198" height="36" rx="10" fill="#103555" stroke="#4096bc"/>
+<text x="239" y="445" fill="#a9dfff" text-anchor="middle" font-size="16" font-family="Arial" font-weight="700">PERIODIC SAMPLES</text>
+
+</svg>

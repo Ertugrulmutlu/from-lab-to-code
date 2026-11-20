@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" role="img" aria-label="Stopping distance and reaction allowance diagram">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#091a37"/><stop offset="0.60" stop-color="#10244d"/><stop offset="1" stop-color="#171639"/></linearGradient>
+ <linearGradient id="ice" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ddcfb"/><stop offset="1" stop-color="#4a8dff"/></linearGradient>
+ <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#aa7eff"/><stop offset="1" stop-color="#6c69ec"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#4c729c" stroke-opacity=".15" stroke-width="1"/></pattern>
+</defs>
+<rect width="480" height="480" rx="24" fill="url(#bg)"/>
+<rect x="12" y="12" width="456" height="456" rx="17" fill="url(#grid)"/>
+<path d="M22 108H458" stroke="#35527c" stroke-width="2" opacity=".8"/>
+<g font-family="Arial,Segoe UI,sans-serif"><text x="28" y="49" font-size="20" fill="#83d2ff" font-weight="800" letter-spacing="1.5">BRAKING DECISION</text><text x="29" y="82" font-size="14" fill="#acc2e3">Physics + time + safety margin</text></g>
+
+<rect x="27" y="137" width="426" height="270" rx="17" fill="#08172f" stroke="#375778" stroke-width="2"/>
+<rect x="326" y="167" width="21" height="203" rx="4" fill="#ac80ff"/>
+<g stroke="#d6c0ff" stroke-width="3"><path d="M327 173l18 18m-18 4 18 18m-18 4 18 18m-18 4 18 18m-18 4 18 18m-18 4 18 18m-18 4 18 18m-18 4 18 18m-18 4 18 18"/></g>
+<path d="M53 365H404" stroke="#6d95c5" stroke-width="4"/>
+<g transform="translate(94 300)"><rect x="-27" y="-43" width="95" height="54" rx="15" fill="#265998" stroke="#79ddff" stroke-width="4"/><rect x="-10" y="-30" width="52" height="20" rx="5" fill="#71cfff" opacity=".6"/><circle cx="-6" cy="12" r="14" fill="#111b3a" stroke="#84caff" stroke-width="5"/><circle cx="48" cy="12" r="14" fill="#111b3a" stroke="#84caff" stroke-width="5"/></g>
+<path d="M167 289H323" stroke="#82dfff" stroke-width="5" stroke-dasharray="11 9"/>
+<path d="m310 276 14 13-14 13" fill="none" stroke="#82dfff" stroke-width="5"/>
+<g font-family="Arial" text-anchor="middle"><text x="238" y="190" font-size="18" font-weight="800" fill="#f4f6ff">STOPPING THRESHOLD</text><text x="235" y="224" font-size="26" font-weight="800" fill="#90dfff">v² / 2a</text><text x="236" y="257" font-size="17" fill="#bca5ff">+ reaction + margin</text><text x="338" y="399" font-size="15" fill="#cbaeff">WALL</text></g>
+<rect x="74" y="420" width="329" height="34" rx="10" fill="#1b3159" stroke="#6775cc"/>
+<text x="237" y="443" fill="#ccddff" text-anchor="middle" font-size="15" font-family="Arial" font-weight="700">DECIDE BEFORE IT'S TOO LATE</text>
+
+</svg>

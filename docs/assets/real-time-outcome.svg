@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" role="img" aria-label="Blocking controller collision compared with non-blocking safe stop">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#091a37"/><stop offset="0.60" stop-color="#10244d"/><stop offset="1" stop-color="#171639"/></linearGradient>
+ <linearGradient id="ice" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ddcfb"/><stop offset="1" stop-color="#4a8dff"/></linearGradient>
+ <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#aa7eff"/><stop offset="1" stop-color="#6c69ec"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#4c729c" stroke-opacity=".15" stroke-width="1"/></pattern>
+</defs>
+<rect width="480" height="480" rx="24" fill="url(#bg)"/>
+<rect x="12" y="12" width="456" height="456" rx="17" fill="url(#grid)"/>
+<path d="M22 108H458" stroke="#35527c" stroke-width="2" opacity=".8"/>
+<g font-family="Arial,Segoe UI,sans-serif"><text x="28" y="49" font-size="20" fill="#83d2ff" font-weight="800" letter-spacing="1.5">CONTROL OUTCOME</text><text x="29" y="82" font-size="14" fill="#acc2e3">Same model, different timing</text></g>
+
+<rect x="27" y="134" width="427" height="131" rx="16" fill="#28162f" stroke="#9b4b7d" stroke-width="2"/>
+<rect x="27" y="283" width="427" height="131" rx="16" fill="#092c3b" stroke="#329da0" stroke-width="2"/>
+<g font-family="Arial" font-size="16" font-weight="800"><text x="48" y="163" fill="#f3abc5">BLOCKING</text><text x="48" y="313" fill="#8bfbe4">NON-BLOCKING</text></g>
+<path d="M48 236H429M48 387H429" stroke="#536a89" stroke-width="3"/>
+<g transform="translate(255 204)"><rect x="0" y="-28" width="74" height="43" rx="10" fill="#3e4a80" stroke="#aab5ff" stroke-width="3"/><circle cx="14" cy="17" r="10" fill="#182446" stroke="#beceff" stroke-width="3"/><circle cx="58" cy="17" r="10" fill="#182446" stroke="#beceff" stroke-width="3"/></g>
+<rect x="334" y="182" width="14" height="55" fill="#ff6b92"/>
+<path d="M339 166l18 18m-18 0 18-18" stroke="#ff809d" stroke-width="5" stroke-linecap="round"/>
+<text x="393" y="206" fill="#ff9db5" font-size="19" font-weight="800" font-family="Arial" text-anchor="middle">HIT</text>
+<g transform="translate(213 354)"><rect x="0" y="-28" width="74" height="43" rx="10" fill="#275a85" stroke="#75d9ff" stroke-width="3"/><circle cx="14" cy="17" r="10" fill="#122747" stroke="#b6efff" stroke-width="3"/><circle cx="58" cy="17" r="10" fill="#122747" stroke="#b6efff" stroke-width="3"/></g>
+<rect x="372" y="334" width="13" height="53" fill="#a58cff"/>
+<path d="M295 360H361" stroke="#64f1d8" stroke-width="3"/><path d="m302 354-9 6 9 6m52-12 9 6-9 6" fill="none" stroke="#64f1d8" stroke-width="3"/>
+<circle cx="397" cy="306" r="14" fill="#135f59" stroke="#5cf4d7" stroke-width="3"/><path d="m390 305 5 5 10-11" fill="none" stroke="#ccfff5" stroke-width="3"/>
+<g font-family="Arial" font-size="15" font-weight="750"><text x="50" y="222" fill="#eab1cb">COLLISION</text><text x="50" y="372" fill="#9ffff0">SAFE STOP</text></g>
+<text x="239" y="445" fill="#c3d3ef" text-anchor="middle" font-size="15" font-family="Arial">Illustrative simulation comparison</text>
+
+</svg>

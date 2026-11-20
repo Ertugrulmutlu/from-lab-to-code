@@ -58,7 +58,7 @@ const PROJECTS = [
     description: 'Compare three trained PyTorch CNNs on MNIST, draw digits, inspect feature maps, and explore the trade-off between classification accuracy and computational cost.',
     githubUrl: 'https://github.com/Ertugrulmutlu/from-lab-to-code/tree/main/04-neural-network-efficiency',
     articleUrl: 'https://dev.to/ertugrulmutlu/from-lab-to-code-4-exploring-neural-network-efficiency-with-python-and-pytorch-1732',
-    status: 'published', featured: true, icon: 'brain', accent: 'lavender',
+    status: 'published', featured: false, icon: 'brain', accent: 'lavender',
     previewSteps: ['CNN Architecture', 'Measured Accuracy', 'Feature Maps', 'Compute Budget'],
     previewImages: [
       'assets/neural-architecture.svg',
@@ -67,7 +67,22 @@ const PROJECTS = [
       'assets/neural-budget.svg'
     ]
   },
-  {id:'05',title:'Control Basics',short:'PID · Simulation · Feedback',category:'Control',description:'Learning how feedback changes system behavior.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'gauge',accent:'lavender'},
+  {
+    id: '05', title: 'Real-Time Robot Control Lab',
+    short: 'Network latency · Braking · Non-blocking control',
+    category: 'Control',
+    description: 'Discover how milliseconds affect safety. Compare blocking and non-blocking robot controllers with adjustable network latency, braking physics, and reproducible experiments.',
+    githubUrl: 'https://github.com/Ertugrulmutlu/from-lab-to-code/tree/main/05-realtime-robot-control',
+    articleUrl: 'https://dev.to/ertugrulmutlu/from-lab-to-code-5-exploring-real-time-robot-control-with-python-1j3c',
+    status: 'published', featured: true, icon: 'timer', accent: 'sky',
+    previewSteps: ['Network Delay', 'Speed Telemetry', 'Brake Decision', 'Safe Stop'],
+    previewImages: [
+      'assets/real-time-network.svg',
+      'assets/real-time-telemetry.svg',
+      'assets/real-time-braking.svg',
+      'assets/real-time-outcome.svg'
+    ]
+  },
   {id:'06',title:'Image Processing Pipeline',short:'Filtering · Edges · Morphology',category:'Computer Vision',description:'Experimenting with practical vision pipelines.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'layers',accent:'teal'},
   {id:'07',title:'Robotics Kinematics',short:'Forward · Inverse · Geometry',category:'Robotics',description:'Exploring robotic geometry through code.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'robot',accent:'amber'},
   {id:'08',title:'Sensor Fusion',short:'Kalman Filter · IMU · GPS',category:'Signal Processing',description:'Combining imperfect measurements.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'cube',accent:'sky'},
@@ -84,6 +99,7 @@ const ICONS = {
   wave:'<path d="M2 12h3l2-8 3 16 3-11 2 3h2l2-6 3 6"/>',
   chip:'<rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"/>',
   brain:'<path d="M12 5c-2-3-6-2.5-7.2.5-3 .9-3.3 5.2-.5 7C2.5 16 6.3 20 10 18.7M12 5c2-3 6-2.5 7.2.5 3 .9 3.3 5.2.5 7 1.8 3.5-2 7.5-5.7 6.2M12 5v14"/><path d="M7 8c1.5 0 2.4 1 3 2m7-2c-1.5 0-2.4 1-3 2M7 14c1.5 0 2.4-1 3-2m7 2c-1.5 0-2.4-1-3-2"/>',
+  timer:'<circle cx="12" cy="13" r="8"/><path d="M12 9v5l3 2M9 2h6M12 2v3M19 6l2-2"/>',
   gauge:'<path d="M4 18a9 9 0 1 1 16 0"/><path d="m12 14 5-5"/><circle cx="12" cy="14" r="1.5"/>',
   layers:'<path d="m12 2 10 6-10 6L2 8l10-6Zm-10 11 10 6 10-6M2 18l10 6 10-6"/>',
   robot:'<path d="M5 19h14M8 19v-3l4-3 3-5m-7 8-3-5m10-3 3-3M4 8h4l3 4"/><circle cx="15" cy="8" r="2"/><circle cx="5" cy="8" r="2"/><circle cx="19" cy="5" r="2"/>',

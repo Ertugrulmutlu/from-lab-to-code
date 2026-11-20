@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#061126"/><stop offset=".56" stop-color="#0e2045"/><stop offset="1" stop-color="#181240"/></linearGradient>
+ <linearGradient id="blue" x2="1"><stop stop-color="#87cfff"/><stop offset="1" stop-color="#685cff"/></linearGradient>
+ <linearGradient id="car" x2="1" y2="1"><stop stop-color="#2968a8"/><stop offset="1" stop-color="#7d5cdd"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="24"/></filter>
+ <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" stroke="#4b669c" stroke-opacity=".18" fill="none"/></pattern>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<rect width="1200" height="630" fill="url(#grid)"/>
+<circle cx="1030" cy="118" r="190" fill="#4734cc" opacity=".25" filter="url(#glow)"/>
+<circle cx="674" cy="514" r="170" fill="#146aac" opacity=".23" filter="url(#glow)"/>
+<rect x="54" y="53" width="301" height="53" rx="23" fill="#212255" stroke="#7054d9"/>
+<text x="80" y="89" font-size="24" fill="#e0d4ff" font-weight="750" font-family="Arial, sans-serif">FROM LAB TO CODE</text>
+<text x="54" y="174" fill="#6dd2ff" font-size="25" font-family="Arial, sans-serif" font-weight="750" letter-spacing="5">PROJECT #05</text>
+<g font-family="Arial, sans-serif" font-weight="800" font-size="68" fill="#f8fbff"><text x="49" y="262">REAL-TIME</text><text x="49" y="340">ROBOT CONTROL</text></g>
+<text x="53" y="399" fill="#c8d7fc" font-family="Arial, sans-serif" font-weight="600" font-size="29">Network delay. Braking. Safe stopping.</text>
+<path d="M55 450H650" stroke="#364d79" stroke-width="2"/>
+<rect x="53" y="480" width="180" height="54" rx="12" fill="#0f3458" stroke="#4388c5"/>
+<text x="143" y="514" fill="#9feaff" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700">PYTHON</text>
+<rect x="248" y="480" width="227" height="54" rx="12" fill="#211d58" stroke="#8069d3"/>
+<text x="361" y="514" fill="#d3c5ff" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700">SIMULATION</text>
+<rect x="727" y="151" width="418" height="343" rx="24" fill="#081b3a" stroke="#4776c2" stroke-width="3"/>
+<text x="758" y="194" fill="#d2e9ff" font-family="Arial, sans-serif" font-size="22" font-weight="750">BRAKING CONTROL</text>
+<rect x="1085" y="239" width="22" height="190" rx="5" fill="#a47cff"/>
+<g stroke="#d8adff" stroke-width="3"><path d="M1087 258l18 18m-18 5 18 18m-18 5 18 18m-18 5 18 18m-18 5 18 18m-18 5 18 18"/></g>
+<path d="M768 415H1116" stroke="#3b7eaf" stroke-width="4"/>
+<path d="M783 362l44 0" stroke="#55dfff" stroke-width="6" stroke-linecap="round"/>
+<g transform="translate(845 340)"><rect x="0" y="0" width="120" height="67" rx="17" fill="url(#car)" stroke="#a4e5ff" stroke-width="5"/><rect x="23" y="13" width="67" height="22" rx="7" fill="#87deff" opacity=".7"/><circle cx="22" cy="68" r="17" fill="#121b3b" stroke="#79c9ff" stroke-width="6"/><circle cx="99" cy="68" r="17" fill="#121b3b" stroke="#79c9ff" stroke-width="6"/></g>
+<path d="M980 363H1071" stroke="url(#blue)" stroke-width="5" stroke-dasharray="10 8"/>
+<text x="916" y="272" font-family="Arial, sans-serif" font-size="29" fill="#a8e9ff" text-anchor="middle" font-weight="800">SAFE STOP</text>
+<rect x="789" y="448" width="281" height="27" rx="12" fill="#114e65" stroke="#20c6bc"/>
+<text x="929" y="467" font-family="Arial,sans-serif" font-size="16" fill="#a0fff1" font-weight="700" text-anchor="middle">TIMING MATTERS</text>
+</svg>
