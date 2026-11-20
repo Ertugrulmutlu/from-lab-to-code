@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="930" height="465" viewBox="0 0 930 465">
+<rect width="930" height="465" rx="16" fill="#0b1720"/>
+<text x="35" y="35" fill="#eaf4f4" font-family="monospace" font-size="20">Project #05 / Network RTT vs. final clearance</text>
+<text x="35" y="57" fill="#8da3ae" font-family="monospace" font-size="12">Jitter 20 ms · speed 10 m/s · seed 2026 · one deterministic run per strategy</text>
+<line x1="95" x2="895" y1="350.0" y2="350.0" stroke="#28414b"/>
+<text x="80" y="354.0" text-anchor="end" fill="#8da3ae" font-family="monospace" font-size="12">0 m</text>
+<line x1="95" x2="895" y1="295.0" y2="295.0" stroke="#28414b"/>
+<text x="80" y="299.0" text-anchor="end" fill="#8da3ae" font-family="monospace" font-size="12">1 m</text>
+<line x1="95" x2="895" y1="240.0" y2="240.0" stroke="#28414b"/>
+<text x="80" y="244.0" text-anchor="end" fill="#8da3ae" font-family="monospace" font-size="12">2 m</text>
+<line x1="95" x2="895" y1="185.0" y2="185.0" stroke="#28414b"/>
+<text x="80" y="189.0" text-anchor="end" fill="#8da3ae" font-family="monospace" font-size="12">3 m</text>
+<line x1="95" x2="895" y1="130.0" y2="130.0" stroke="#28414b"/>
+<text x="80" y="134.0" text-anchor="end" fill="#8da3ae" font-family="monospace" font-size="12">4 m</text>
+<line x1="95" x2="895" y1="75.0" y2="75.0" stroke="#28414b"/>
+<text x="80" y="79.0" text-anchor="end" fill="#8da3ae" font-family="monospace" font-size="12">5 m</text>
+<text x="95.0" y="374" text-anchor="middle" fill="#8da3ae" font-family="monospace" font-size="12">0</text>
+<text x="295.0" y="374" text-anchor="middle" fill="#8da3ae" font-family="monospace" font-size="12">100</text>
+<text x="495.0" y="374" text-anchor="middle" fill="#8da3ae" font-family="monospace" font-size="12">200</text>
+<text x="695.0" y="374" text-anchor="middle" fill="#8da3ae" font-family="monospace" font-size="12">300</text>
+<text x="895.0" y="374" text-anchor="middle" fill="#8da3ae" font-family="monospace" font-size="12">400</text>
+<text x="495" y="411" fill="#a9bec6" font-family="monospace" font-size="12" text-anchor="middle">Network round trip time (ms)</text>
+<polyline points="95.0,329.8 145.0,350.0 195.0,350.0 245.0,350.0 295.0,350.0 395.0,350.0 495.0,350.0 595.0,350.0 695.0,350.0 795.0,350.0 895.0,350.0" fill="none" stroke="#f0786a" stroke-width="3"/>
+<circle cx="95.0" cy="329.8" r="5" fill="#f0786a"/>
+<circle cx="145.0" cy="350.0" r="5" fill="#f0786a"/>
+<path d="M142.0 347.0l6 6 m0 -6l-6 6" stroke="#0b1720" stroke-width="1.5"/>
+<circle cx="195.0" cy="350.0" r="5" fill="#f0786a"/>
+<path d="M192.0 347.0l6 6 m0 -6l-6 6" stroke="#0b1720" stroke-width="1.5"/>
+<circle cx="245.0" cy="350.0" r="5" fill="#f0786a"/>
+<path d="M242.0 347.0l6 6 m0 -6l-6 6" stroke="#0b1720" stroke-width="1.5"/>
+<circle cx="295.0" cy="350.0" r="5" fill="#f0786a"/>
+<path d="M292.0 347.0l6 6 m0 -6l-6 6" stroke="#0b1720" stroke-width="1.5"/>
+<circle cx="395.0" cy="350.0" r="5" fill="#f0786a"/>
+<path d="M392.0 347.0l6 6 m0 -6l-6 6" stroke="#0b1720" stroke-width="1.5"/>
+<circle cx="495.0" cy="350.0" r="5" fill="#f0786a"/>
+<path d="M492.0 347.0l6 6 m0 -6l-6 6" stroke="#0b1720" stroke-width="1.5"/>
+<circle cx="595.0" cy="350.0" r="5" fill="#f0786a"/>
+<path d="M592.0 347.0l6 6 m0 -6l-6 6" stroke="#0b1720" stroke-width="1.5"/>
+<circle cx="695.0" cy="350.0" r="5" fill="#f0786a"/>
+<path d="M692.0 347.0l6 6 m0 -6l-6 6" stroke="#0b1720" stroke-width="1.5"/>
+<circle cx="795.0" cy="350.0" r="5" fill="#f0786a"/>
+<path d="M792.0 347.0l6 6 m0 -6l-6 6" stroke="#0b1720" stroke-width="1.5"/>
+<circle cx="895.0" cy="350.0" r="5" fill="#f0786a"/>
+<path d="M892.0 347.0l6 6 m0 -6l-6 6" stroke="#0b1720" stroke-width="1.5"/>
+<polyline points="95.0,274.8 145.0,269.3 195.0,269.3 245.0,285.8 295.0,274.8 395.0,263.8 495.0,274.8 595.0,258.3 695.0,274.8 795.0,269.3 895.0,274.8" fill="none" stroke="#b9f477" stroke-width="3"/>
+<circle cx="95.0" cy="274.8" r="5" fill="#b9f477"/>
+<circle cx="145.0" cy="269.3" r="5" fill="#b9f477"/>
+<circle cx="195.0" cy="269.3" r="5" fill="#b9f477"/>
+<circle cx="245.0" cy="285.8" r="5" fill="#b9f477"/>
+<circle cx="295.0" cy="274.8" r="5" fill="#b9f477"/>
+<circle cx="395.0" cy="263.8" r="5" fill="#b9f477"/>
+<circle cx="495.0" cy="274.8" r="5" fill="#b9f477"/>
+<circle cx="595.0" cy="258.3" r="5" fill="#b9f477"/>
+<circle cx="695.0" cy="274.8" r="5" fill="#b9f477"/>
+<circle cx="795.0" cy="269.3" r="5" fill="#b9f477"/>
+<circle cx="895.0" cy="274.8" r="5" fill="#b9f477"/>
+<rect x="570" y="424" width="12" height="4" fill="#f0786a"/><text x="590" y="432" fill="#c5d5d8" font-family="monospace" font-size="12">Blocking</text>
+<rect x="720" y="424" width="12" height="4" fill="#b9f477"/><text x="740" y="432" fill="#c5d5d8" font-family="monospace" font-size="12">Non-blocking</text>
+</svg>

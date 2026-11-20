@@ -1,0 +1,170 @@
+{
+  "source": "deterministic simulated network; no real-network data",
+  "rows": [
+    {
+      "rtt_ms": 0,
+      "blocking": {
+        "outcome": "safe_stop",
+        "clearance_m": 0.367,
+        "brake_command_at_s": 4.67,
+        "elapsed_s": 7.18
+      },
+      "async": {
+        "outcome": "safe_stop",
+        "clearance_m": 1.367,
+        "brake_command_at_s": 4.57,
+        "elapsed_s": 7.08
+      }
+    },
+    {
+      "rtt_ms": 25,
+      "blocking": {
+        "outcome": "collision",
+        "clearance_m": 0.0,
+        "brake_command_at_s": 5.09,
+        "elapsed_s": 6.21
+      },
+      "async": {
+        "outcome": "safe_stop",
+        "clearance_m": 1.467,
+        "brake_command_at_s": 4.55,
+        "elapsed_s": 7.07
+      }
+    },
+    {
+      "rtt_ms": 50,
+      "blocking": {
+        "outcome": "collision",
+        "clearance_m": 0.0,
+        "brake_command_at_s": 4.84,
+        "elapsed_s": 6.48
+      },
+      "async": {
+        "outcome": "safe_stop",
+        "clearance_m": 1.467,
+        "brake_command_at_s": 4.53,
+        "elapsed_s": 7.07
+      }
+    },
+    {
+      "rtt_ms": 75,
+      "blocking": {
+        "outcome": "collision",
+        "clearance_m": 0.0,
+        "brake_command_at_s": 5.14,
+        "elapsed_s": 6.16
+      },
+      "async": {
+        "outcome": "safe_stop",
+        "clearance_m": 1.167,
+        "brake_command_at_s": 4.55,
+        "elapsed_s": 7.1
+      }
+    },
+    {
+      "rtt_ms": 100,
+      "blocking": {
+        "outcome": "collision",
+        "clearance_m": 0.0,
+        "brake_command_at_s": 4.69,
+        "elapsed_s": 6.85
+      },
+      "async": {
+        "outcome": "safe_stop",
+        "clearance_m": 1.367,
+        "brake_command_at_s": 4.52,
+        "elapsed_s": 7.08
+      }
+    },
+    {
+      "rtt_ms": 150,
+      "blocking": {
+        "outcome": "collision",
+        "clearance_m": 0.0,
+        "brake_command_at_s": 5.33,
+        "elapsed_s": 6.05
+      },
+      "async": {
+        "outcome": "safe_stop",
+        "clearance_m": 1.567,
+        "brake_command_at_s": 4.47,
+        "elapsed_s": 7.06
+      }
+    },
+    {
+      "rtt_ms": 200,
+      "blocking": {
+        "outcome": "collision",
+        "clearance_m": 0.0,
+        "brake_command_at_s": 4.9,
+        "elapsed_s": 6.3
+      },
+      "async": {
+        "outcome": "safe_stop",
+        "clearance_m": 1.367,
+        "brake_command_at_s": 4.47,
+        "elapsed_s": 7.08
+      }
+    },
+    {
+      "rtt_ms": 250,
+      "blocking": {
+        "outcome": "collision",
+        "clearance_m": 0.0,
+        "brake_command_at_s": 5.44,
+        "elapsed_s": 6.01
+      },
+      "async": {
+        "outcome": "safe_stop",
+        "clearance_m": 1.667,
+        "brake_command_at_s": 4.42,
+        "elapsed_s": 7.05
+      }
+    },
+    {
+      "rtt_ms": 300,
+      "blocking": {
+        "outcome": "collision",
+        "clearance_m": 0.0,
+        "brake_command_at_s": 4.71,
+        "elapsed_s": 6.5
+      },
+      "async": {
+        "outcome": "safe_stop",
+        "clearance_m": 1.367,
+        "brake_command_at_s": 4.42,
+        "elapsed_s": 7.08
+      }
+    },
+    {
+      "rtt_ms": 350,
+      "blocking": {
+        "outcome": "collision",
+        "clearance_m": 0.0,
+        "brake_command_at_s": 5.15,
+        "elapsed_s": 6.08
+      },
+      "async": {
+        "outcome": "safe_stop",
+        "clearance_m": 1.467,
+        "brake_command_at_s": 4.38,
+        "elapsed_s": 7.07
+      }
+    },
+    {
+      "rtt_ms": 400,
+      "blocking": {
+        "outcome": "collision",
+        "clearance_m": 0.0,
+        "brake_command_at_s": 5.51,
+        "elapsed_s": 5.99
+      },
+      "async": {
+        "outcome": "safe_stop",
+        "clearance_m": 1.367,
+        "brake_command_at_s": 4.37,
+        "elapsed_s": 7.08
+      }
+    }
+  ]
+}

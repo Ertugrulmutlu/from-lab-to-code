@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071119">
+  <meta name="description" content="An interactive robot-control experiment in network latency, asynchronous sensing, braking distance, and timing constraints.">
+  <title>Real-Time Robot Control — From Lab to Code #05</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <a class="brand" href="https://github.com/Ertugrulmutlu/from-lab-to-code" target="_blank" rel="noopener noreferrer"><span class="brand-symbol">&lt;/&gt;</span><span>FROM LAB <span class="muted-brand">TO</span> CODE</span></a>
+    <div class="top-meta"><span class="header-index">EXPERIMENT <strong>05 / 09</strong></span><span class="divider"></span><a href="https://github.com/Ertugrulmutlu/from-lab-to-code" target="_blank" rel="noopener noreferrer">SOURCE SERIES <span aria-hidden="true">↗</span></a></div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="intro-copy">
+        <div class="kicker"><span class="kicker-line"></span> DISTRIBUTED SYSTEMS / REAL-TIME CONTROL</div>
+        <h1>Every millisecond<br><em>has a distance.</em></h1>
+        <p class="intro-desc">A robot is heading toward a wall. Its controller relies on delayed sensor readings. Does it brake in time? Compare two control strategies, disturb the network, and discover why timing is a safety constraint.</p>
+        <div class="hero-tags"><span>01 / CONTROL</span><span>02 / NETWORK</span><span>03 / SAFETY</span></div>
+      </div>
+      <div class="hero-stat" aria-label="Control loop baseline">
+        <div class="pulse-orbit"><span class="pulse-center">10<span>ms</span></span><span class="orbit-a"></span><span class="orbit-b"></span></div>
+        <p>SIMULATION<br>TIMESTEP</p><small>Discrete-time model<br>Not a hard real-time guarantee</small>
+      </div>
+    </section>
+
+    <div class="section-heading"><div><span class="section-id">01 — LIVE EXPERIMENT</span><h2>The braking test</h2></div><span class="section-side">INTERACTIVE WORKSPACE <span class="square-thing">▥</span></span></div>
+
+    <section class="workspace">
+      <div class="arena-card">
+        <div class="card-toolbar"><div class="toolbar-title"><span class="led" id="sim-led"></span><strong>CONTROL ARENA</strong><span class="toolbar-sub">1D PHYSICS / VIRTUAL TIME</span></div><span class="state-pill" id="sim-status">READY</span></div>
+        <div class="arena-screen"><canvas id="arena-canvas" aria-label="Animated robot and wall with braking threshold" role="img"></canvas><div class="arena-top-left">CAM 01 <span>●</span> ROBOT / WALL</div><div class="arena-top-right">x <span id="world-x">8.00</span>m</div><div class="arena-bottom-left">01<span class="faded"> / </span>COLLISION AVOIDANCE</div><div class="arena-bottom-right" id="gap-overlay">43.00 m TO OBSTACLE</div></div>
+        <div class="telemetry-head"><span>LIVE TELEMETRY</span><span>SIMULATED, NOT PHYSICAL HARDWARE</span></div>
+        <div class="telemetry">
+          <div><div class="metric-label">ELAPSED <span>↗</span></div><div class="metric-value"><span id="stat-time">0.00</span><small>s</small></div></div>
+          <div><div class="metric-label">TRUE SPEED <span>↗</span></div><div class="metric-value"><span id="stat-speed">0.00</span><small>m/s</small></div></div>
+          <div><div class="metric-label">SPEED EST. <span>↗</span></div><div class="metric-value"><span id="stat-estimate">0.00</span><small>m/s</small></div></div>
+          <div><div class="metric-label">BRAKE THRESHOLD <span>↗</span></div><div class="metric-value"><span id="stat-threshold">1.20</span><small>m</small></div></div>
+        </div>
+        <div class="graph-wrap"><div class="graph-head"><strong>SPEED OVER TIME</strong><span>TRUE SPEED <i class="legend-swatch blue"></i> &nbsp; ESTIMATE <i class="legend-swatch mint"></i></span></div><canvas id="speed-chart" aria-label="Time-series graph of robot speed and estimated speed" role="img"></canvas></div>
+      </div>
+
+      <aside class="controls-card">
+        <div class="side-heading"><span class="section-id">EXPERIMENT SETUP</span><span class="circle-info" title="Every run is deterministic for a given strategy, configuration and random seed.">i</span></div>
+        <div class="side-title">Set the conditions.</div>
+        <label class="field-head" for="mode-async">CONTROLLER STRATEGY</label>
+        <div class="mode-switch" role="group" aria-label="Controller strategy"><button id="mode-blocking" type="button" data-mode="blocking">Blocking</button><button id="mode-async" class="selected" type="button" data-mode="async">Non-blocking</button></div>
+        <p class="field-note">Blocking waits for two sensor samples; non-blocking estimates speed from successive periodic readings.</p>
+        <div class="sliders">
+          <div class="slider-field"><div class="slider-title"><label for="target_speed">TARGET SPEED</label><output id="label-target_speed">10.0 <span>m/s</span></output></div><input id="target_speed" type="range" min="2" max="15" step="0.5" value="10"><div class="range-ends"><span>2 m/s</span><span>15 m/s</span></div></div>
+          <div class="slider-field"><div class="slider-title"><label for="network_rtt_ms">NETWORK RTT</label><output id="label-network_rtt_ms">90 <span>ms</span></output></div><input id="network_rtt_ms" type="range" min="0" max="400" step="10" value="90"><div class="range-ends"><span>0 ms</span><span>400 ms</span></div></div>
+          <div class="slider-field"><div class="slider-title"><label for="jitter_ms">ADDITIONAL JITTER</label><output id="label-jitter_ms">20 <span>ms</span></output></div><input id="jitter_ms" type="range" min="0" max="200" step="10" value="20"><div class="range-ends"><span>0 ms</span><span>200 ms</span></div></div>
+          <div class="slider-field"><div class="slider-title"><label for="braking">BRAKING DECELERATION</label><output id="label-braking">4.0 <span>m/s²</span></output></div><input id="braking" type="range" min="1" max="8" step="0.5" value="4"><div class="range-ends"><span>1 m/s²</span><span>8 m/s²</span></div></div>
+        </div>
+        <details class="advanced"><summary>ADVANCED PARAMETERS <span>+</span></summary><div class="advanced-grid"><label>ACCELERATION <input id="acceleration" type="number" min="1" max="6" step="0.5" value="3"></label><label>SAFETY MARGIN (m) <input id="safety_margin" type="number" min="0" max="5" step="0.1" value="1.2"></label><label>POLL PERIOD (ms) <input id="poll_ms" type="number" min="10" max="200" step="10" value="50"></label><label>BLOCKING WAIT (ms) <input id="measurement_ms" type="number" min="100" max="900" step="50" value="500"></label><label>RANDOM SEED <input id="seed" type="number" min="0" max="9999999" step="1" value="2026"></label></div></details>
+        <div class="actions"><button type="button" id="run-btn" class="primary-btn"><span>▶</span> RUN SIMULATION</button><button type="button" id="pause-btn" class="secondary-btn">PAUSE</button><button type="button" id="reset-btn" class="icon-btn" title="Reset" aria-label="Reset simulation">↻</button></div>
+        <div class="control-tip"><span class="tip-icon">◎</span><p>Change parameters, then start a fresh run. Every run uses the same initial position and explicit random seed.</p></div>
+      </aside>
+    </section>
+
+    <section class="analysis-section">
+      <div class="section-heading"><div><span class="section-id">02 — SIDE-BY-SIDE ANALYSIS</span><h2>One problem. Two decisions.</h2></div><button type="button" id="compare-btn" class="compare-btn">RUN BOTH STRATEGIES <span>↗</span></button></div>
+      <div class="compare-area">
+        <div class="comparison-card">
+          <div class="mini-heading">EXPERIMENT RESULTS <span id="comparison-caption">BASELINE / SEED 2026</span></div>
+          <div class="strategy-grid"><div class="strategy-stat"><span class="strategy-name">01 — BLOCKING</span><strong id="blocking-result">—</strong><div class="strategy-details">Final clearance <span id="blocking-clearance">—</span></div><div class="strategy-details">Time unable to poll <span id="blocking-unavailable">—</span></div></div><div class="strategy-stat"><span class="strategy-name">02 — NON-BLOCKING</span><strong id="async-result">—</strong><div class="strategy-details">Final clearance <span id="async-clearance">—</span></div><div class="strategy-details">Time unable to poll <span id="async-unavailable">—</span></div></div></div>
+          <div class="comparison-note" id="comparison-note">Run both strategies on the same configuration to see the outcome. The network delays are reproducibly sampled, not measured Internet packets.</div>
+          <button type="button" id="export-btn" class="export-btn" disabled>EXPORT EXPERIMENT JSON <span>↓</span></button>
+        </div>
+        <div class="log-card"><div class="mini-heading">CONTROLLER EVENT STREAM <span>LAST 10 EVENTS</span></div><div id="event-stream" class="event-stream" aria-live="polite"></div><div class="log-footer"><span><i class="terminal-dot"></i> SIMULATION CLOCK</span><span id="log-clock">00.00 S</span></div></div>
+      </div>
+    </section>
+
+    <section class="method-section"><div><span class="section-id">03 — UNDER THE HOOD</span><h2>What we actually model.</h2></div><div class="method-grid"><article><div class="method-index">01 / PHYSICS</div><h3>Finite braking</h3><p>The robot accelerates and decelerates at fixed rates. Required braking distance grows with speed squared.</p><div class="formula">d = v² / (2a)</div></article><article><div class="method-index">02 / TRANSPORT</div><h3>Delayed information</h3><p>Telemetry requests and brake commands cross a virtual network with configurable delay and jitter.</p><div class="formula">RTT + jitter</div></article><article><div class="method-index">03 / SCHEDULING</div><h3>Blocking vs. periodic</h3><p>One controller waits 500 ms between speed samples. The other polls periodically without waiting.</p><div class="formula">Δt = 10 ms</div></article></div></section>
+    <div class="disclaimer"><strong>MODEL LIMITATIONS</strong><p>Deterministic educational simulation, not a certified real-time controller or physical collision-prevention system. The browser demo uses a virtual network; the optional Python TCP demo uses real local sockets. Simulated latency, geometry and physics are explicitly simplified. A single seed is not a statistical performance guarantee.</p></div>
+  </main>
+  <footer class="footer"><span>FROM LAB TO CODE <span class="footer-bullet">◆</span> EXPERIMENT 05</span><span>BUILT TO TEST IDEAS, NOT ASSUMPTIONS.</span></footer>
+</div>
+</body>
+</html>
