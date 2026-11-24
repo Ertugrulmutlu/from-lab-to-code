@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>From Lab to Code #06 | SystemC Architecture Playground</title>
+  <link rel="stylesheet" href="style.css?v=07">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark">∿</div>
+      <div>
+        <small>FROM LAB TO CODE / 06</small>
+        <h1>SystemC Architecture Playground</h1>
+      </div>
+    </div>
+    <div class="header-status">
+      <span id="health" class="status">Checking runner…</span>
+      <span class="status subtle">v0.7 · Local Docker sandbox</span>
+    </div>
+  </header>
+
+  <nav id="tabs" class="exp-tabs">
+    <button data-model="functional">01 Functional adder</button>
+    <button data-model="full" class="active">02 Full adder</button>
+    <button data-model="ripple">03 Ripple carry</button>
+    <button data-model="cpu">04 CPU / TLM</button>
+  </nav>
+
+  <main>
+    <section class="toolbar panel">
+      <div>
+        <small>EXPERIMENT</small>
+        <h2 id="experiment">Full adder</h2>
+        <p id="description"></p>
+      </div>
+      <div class="inputs" id="params">
+        <label>A<input id="a" type="number" value="1" min="0"></label>
+        <label>B<input id="b" type="number" value="1" min="0"></label>
+        <label id="cin-label">Carry in<select id="cin"><option>0</option><option>1</option></select></label>
+        <label id="width-label">Width<select id="width"><option>4</option><option>8</option><option>16</option><option>32</option></select></label>
+        <label id="latency-label">Memory latency (ns)<input id="latency" type="number" min="0" max="1000" value="10"></label>
+      </div>
+      <button id="run" class="primary">▶ Build &amp; run</button>
+    </section>
+
+    <div class="workspace">
+      <section class="panel editor-panel">
+        <div class="panelhead tight">
+          <div>
+            <h3>Source editor</h3>
+            <small class="muted">Explore the hardware, interface and testbench separately.</small>
+          </div>
+          <div class="head-actions">
+            <span id="file-label" class="tag">C++</span>
+            <button id="reset">Reset</button>
+          </div>
+        </div>
+
+        <div id="file-tabs" class="file-tabs" aria-label="Source files"></div>
+        <div class="editor-shell" id="editor-shell">
+          <div id="gutter" class="gutter" aria-hidden="true"></div>
+          <div id="monaco"></div>
+          <pre id="highlight" aria-hidden="true"></pre>
+          <textarea id="editor" spellcheck="false" aria-label="Source code"></textarea>
+        </div>
+
+        <div class="editor-meta">
+          <span id="editor-status">Local source editor</span>
+          <span id="cursor-status" class="muted">1:1</span>
+          <span id="line-count" class="muted">0 lines</span>
+          <div class="grow"></div>
+
+        </div>
+      </section>
+
+      <section class="panel visual-panel">
+        <div class="panelhead tight">
+          <div>
+            <h3>Architecture inspector</h3>
+            <small class="muted">Live simulation view + source-derived connectivity and process analysis.</small>
+          </div>
+          <div class="head-actions wrap">
+            <button id="live-view" class="active">Live view</button>
+            <button id="auto-view">Auto schematic</button>
+            <span class="tag" id="parser-status">Parser idle</span>
+            <span class="tag" id="run-status">Awaiting simulation</span>
+          </div>
+        </div>
+
+        <div class="metrics">
+          <div><small>SIM TIME</small><strong id="time">—</strong></div>
+          <div><small>DELTA COUNT</small><strong id="delta">—</strong></div>
+          <div><small>EVENT / MODE</small><strong id="kind">—</strong></div>
+        </div>
+
+        <div id="graph" class="graph"></div>
+        <div id="detail" class="detail"></div>
+
+        <div class="timeline">
+          <button id="prev" title="Previous event">◀</button>
+          <button id="play">Play</button>
+          <button id="next" title="Next event">▶</button>
+          <input type="range" id="seek" min="0" max="0" value="0" aria-label="Simulation event">
+          <span id="event-count">0 / 0</span>
+        </div>
+        <small class="hint">Auto schematic is pattern-based and best-effort. Live view comes from recorded simulation events.</small>
+      </section>
+    </div>
+
+    <section class="panel">
+      <div class="panelhead tight">
+        <h3>Waveform explorer <span id="scale" class="muted"></span></h3>
+        <div class="head-actions">
+          <button id="zoom-out">−</button>
+          <button id="zoom-in">+</button>
+          <button id="download" disabled>Export VCD</button>
+        </div>
+      </div>
+      <div id="signals" class="signals"></div>
+      <div id="wave-scroll"><canvas id="wave" height="200"></canvas></div>
+      <small class="hint">VCD records physical simulation time. Delta-cycle transitions are shown in the event inspector.</small>
+    </section>
+
+    <div class="bottom">
+      <section class="panel">
+        <div class="panelhead tight">
+          <h3>Build &amp; simulation console</h3>
+          <button id="clear">Clear</button>
+        </div>
+        <pre id="console">Ready. Start Docker Desktop, build the runner image, then click Build &amp; run.</pre>
+      </section>
+
+      <section class="panel">
+        <div class="panelhead tight">
+          <h3>Event log</h3>
+          <span class="muted" id="event-total">0 events</span>
+        </div>
+        <div id="events" class="events"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pagefoot">From Lab to Code #06 · Build. Visualize. Explain. · Independent educational implementation · Local-first execution</footer>
+  <script src="schematic.js?v=07"></script>
+  <script src="app.js?v=07"></script>
+</body>
+</html>
