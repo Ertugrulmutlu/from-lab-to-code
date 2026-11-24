@@ -74,7 +74,7 @@ const PROJECTS = [
     description: 'Discover how milliseconds affect safety. Compare blocking and non-blocking robot controllers with adjustable network latency, braking physics, and reproducible experiments.',
     githubUrl: 'https://github.com/Ertugrulmutlu/from-lab-to-code/tree/main/05-realtime-robot-control',
     articleUrl: 'https://dev.to/ertugrulmutlu/from-lab-to-code-5-exploring-real-time-robot-control-with-python-1j3c',
-    status: 'published', featured: true, icon: 'timer', accent: 'sky',
+    status: 'published', featured: false, icon: 'timer', accent: 'sky',
     previewSteps: ['Network Delay', 'Speed Telemetry', 'Brake Decision', 'Safe Stop'],
     previewImages: [
       'assets/real-time-network.svg',
@@ -83,7 +83,22 @@ const PROJECTS = [
       'assets/real-time-outcome.svg'
     ]
   },
-  {id:'06',title:'Image Processing Pipeline',short:'Filtering · Edges · Morphology',category:'Computer Vision',description:'Experimenting with practical vision pipelines.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'layers',accent:'teal'},
+  {
+    id: '06', title: 'SystemC Architecture Playground',
+    short: 'C++ · Delta cycles · TLM · VCD waveforms',
+    category: 'Embedded',
+    description: 'Explore real SystemC hardware simulations in a browser-based C++ environment. Inspect logic gates, follow ripple carry propagation, analyze automatically extracted architecture, and trace CPU–memory transactions.',
+    githubUrl: 'https://github.com/Ertugrulmutlu/from-lab-to-code/tree/main/06-systemc-architecture-playground',
+    articleUrl: 'https://dev.to/ertugrulmutlu/from-lab-to-code-6-exploring-hardware-simulation-with-c-and-systemc-5b1h',
+    status: 'published', featured: true, icon: 'chip', accent: 'teal',
+    previewSteps: ['SystemC Code', 'Logic & Carry', 'VCD Waveforms', 'CPU / TLM'],
+    previewImages: [
+      'assets/systemc-code.svg',
+      'assets/systemc-logic.svg',
+      'assets/systemc-waveforms.svg',
+      'assets/systemc-tlm.svg'
+    ]
+  },
   {id:'07',title:'Robotics Kinematics',short:'Forward · Inverse · Geometry',category:'Robotics',description:'Exploring robotic geometry through code.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'robot',accent:'amber'},
   {id:'08',title:'Sensor Fusion',short:'Kalman Filter · IMU · GPS',category:'Signal Processing',description:'Combining imperfect measurements.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'cube',accent:'sky'},
   {id:'09',title:'System Simulation',short:'Modeling · Visualization · Analysis',category:'Simulation',description:'Turning mathematical models into experiments.',githubUrl:'',articleUrl:'',status:'planned',featured:false,icon:'chart',accent:'pink'}
